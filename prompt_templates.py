@@ -8,9 +8,6 @@ import logging
 from typing import List, Dict, Any, Optional
 from dataclasses import dataclass
 
-from retriever import SearchResult
-
-
 logger = logging.getLogger(__name__)
 
 
@@ -63,7 +60,7 @@ RESPONSE FORMAT:
     def build_prompt(
         self, 
         question: str, 
-        search_results: List[SearchResult],
+        search_results: List[Any],
         chat_history: Optional[List[Dict[str, str]]] = None
     ) -> str:
         """
@@ -106,7 +103,7 @@ RESPONSE FORMAT:
         
         return full_prompt
     
-    def _build_context(self, search_results: List[SearchResult]) -> str:
+    def _build_context(self, search_results: List[Any]) -> str:
         """Build context string from search results."""
         if not search_results:
             return "No relevant information found in Charlie's records."
