@@ -1,0 +1,139 @@
+{
+  "title": "Yutian Yang Resume Knowledge Graph",
+  "nodes": [
+    {"id": "yutian-yang", "label": "Yutian Yang", "type": "Person"},
+    {"id": "onshape-ptc", "label": "Onshape by PTC (R&D Strategy)", "type": "Organization"},
+    {"id": "pinecone", "label": "Pinecone", "type": "Organization"},
+    {"id": "allschool", "label": "Allschool", "type": "Organization"},
+    {"id": "ucd-economics", "label": "UC Davis Department of Economics", "type": "Organization"},
+    {"id": "ucd-ms", "label": "University of California, Davis — M.S. Statistics", "type": "Education"},
+    {"id": "ucd-bs", "label": "University of California, Davis — B.S. Statistics & Economics", "type": "Education"},
+    {"id": "project-mushroom", "label": "Classification of Mushrooms Project", "type": "Project"},
+    {"id": "skill-programming", "label": "Programming Languages", "type": "Skill"},
+    {"id": "skill-ml", "label": "Machine Learning", "type": "Skill"},
+    {"id": "skill-data-engineering", "label": "Data Engineering", "type": "Skill"},
+    {"id": "skill-bi", "label": "Business Intelligence & Analytics", "type": "Skill"},
+    {"id": "tech-aws-bedrock", "label": "AWS Bedrock", "type": "Technology"},
+    {"id": "tech-claude", "label": "Claude 3.5 Sonnet", "type": "Technology"},
+    {"id": "tech-titan-embeddings", "label": "Titan Embeddings", "type": "Technology"},
+    {"id": "tech-prophet", "label": "Prophet", "type": "Technology"},
+    {"id": "tech-isolation-forest", "label": "Isolation Forest", "type": "Technology"},
+    {"id": "tech-merlion", "label": "Merlion", "type": "Technology"},
+    {"id": "tech-lstm-ae", "label": "LSTM Autoencoder", "type": "Technology"},
+    {"id": "tech-looker", "label": "Looker", "type": "Technology"},
+    {"id": "tech-sql", "label": "SQL", "type": "Technology"},
+    {"id": "tech-sigma", "label": "Sigma", "type": "Technology"},
+    {"id": "tech-bigquery", "label": "BigQuery", "type": "Technology"},
+    {"id": "tech-dbt", "label": "dbt", "type": "Technology"},
+    {"id": "tech-python", "label": "Python", "type": "Technology"},
+    {"id": "tech-random-forest", "label": "Random Forest", "type": "Technology"},
+    {"id": "community-wiml", "label": "Women in Machine Learning Mentorship Program", "type": "Community"},
+    {"id": "community-seattle-ai", "label": "Seattle Applied AI Meetup", "type": "Community"}
+  ],
+  "edges": [
+    {
+      "source": "yutian-yang",
+      "target": "onshape-ptc",
+      "relation": "interned_at",
+      "start": "June 2025",
+      "end": "August 2025",
+      "location": "Boston, MA",
+      "description": "Data Science Intern focused on R&D strategy with API telemetry analytics and AI feedback research.",
+      "highlights": [
+        "Implemented Prophet with Isolation Forest for anomaly detection",
+        "Leveraged AWS Bedrock Titan Embeddings and Claude 3.5 Sonnet to cluster NPS feedback",
+        "Built Looker dashboards and Slack automation for anomaly monitoring"
+      ]
+    },
+    {
+      "source": "yutian-yang",
+      "target": "pinecone",
+      "relation": "interned_at",
+      "start": "June 2024",
+      "end": "August 2024",
+      "location": "New York, NY",
+      "description": "Data Science Intern supporting go-to-market analytics and product intelligence.",
+      "highlights": [
+        "Designed Book of Business and Account 360 dashboards with SQL and Sigma",
+        "Created dim_assistants schema in BigQuery and dbt",
+        "Conducted churn analysis with Random Forest models resulting in 10% churn reduction"
+      ]
+    },
+    {
+      "source": "yutian-yang",
+      "target": "allschool",
+      "relation": "interned_at",
+      "start": "June 2022",
+      "end": "August 2022",
+      "location": "San Mateo, CA",
+      "description": "Data Analyst Intern in Growth & BI with experimentation and dashboard automation initiatives.",
+      "highlights": [
+        "Executed A/B tests and segmentation analyses on traffic and revenue",
+        "Evaluated multi-channel acquisition behaviour using SQL and BI tooling",
+        "Developed Selenium web scraper and Looker Studio dashboard for real-time visibility"
+      ]
+    },
+    {
+      "source": "yutian-yang",
+      "target": "ucd-economics",
+      "relation": "research_assistant_at",
+      "start": "July 2020",
+      "end": "September 2020",
+      "location": "Davis, CA",
+      "description": "Research Assistant analysing procrastination and present-biased behaviour with Professor Anujit Chakraborty.",
+      "highlights": [
+        "Applied bootstrapping to expand the dataset to 20,000 observations",
+        "Used logistic regression and GLMs to study behavioural trends",
+        "Implemented Lasso regularisation to address multicollinearity"
+      ]
+    },
+    {
+      "source": "yutian-yang",
+      "target": "ucd-ms",
+      "relation": "earned_degree",
+      "start": "September 2021",
+      "end": "June 2023",
+      "location": "Davis, CA",
+      "description": "Master of Science in Statistics with advanced coursework in statistical computing, machine learning, and optimisation."
+    },
+    {
+      "source": "yutian-yang",
+      "target": "ucd-bs",
+      "relation": "earned_degree",
+      "start": "September 2017",
+      "end": "June 2021",
+      "location": "Davis, CA",
+      "description": "Bachelor of Science in Statistics and Economics."
+    },
+    {
+      "source": "yutian-yang",
+      "target": "project-mushroom",
+      "relation": "built_project",
+      "description": "Collaborated on mushroom classification models using Random Forest, Kernel SVM, CNNs, and ResNet50 transfer learning.",
+      "highlights": [
+        "Implemented hyperparameter tuning with grid search",
+        "Evaluated deep learning architectures for image classification"
+      ]
+    },
+    {"source": "yutian-yang", "target": "skill-programming", "relation": "skilled_in", "description": "Experienced in SQL, Python, and R."},
+    {"source": "yutian-yang", "target": "skill-ml", "relation": "skilled_in", "description": "Hands-on with Scikit-learn, TensorFlow, Random Forests, SVM, CNN, and time series techniques."},
+    {"source": "yutian-yang", "target": "skill-data-engineering", "relation": "skilled_in", "description": "Builds data pipelines with BigQuery, dbt, AWS, GCP, and ETL design."},
+    {"source": "yutian-yang", "target": "skill-bi", "relation": "skilled_in", "description": "Develops BI assets with Tableau, Power BI, Looker, Sigma, and Google Analytics."},
+    {"source": "yutian-yang", "target": "community-wiml", "relation": "volunteers_with", "description": "Mentor with the WiML Mentorship Program."},
+    {"source": "yutian-yang", "target": "community-seattle-ai", "relation": "organises", "description": "Organizer for the 1,200+ member Seattle Applied AI Meetup."},
+    {"source": "onshape-ptc", "target": "tech-aws-bedrock", "relation": "used_technology", "description": "Leveraged AWS Bedrock services for feedback clustering."},
+    {"source": "onshape-ptc", "target": "tech-claude", "relation": "used_technology", "description": "Applied Claude 3.5 Sonnet for qualitative analysis."},
+    {"source": "onshape-ptc", "target": "tech-titan-embeddings", "relation": "used_technology", "description": "Generated embeddings for clustering feedback."},
+    {"source": "onshape-ptc", "target": "tech-prophet", "relation": "used_technology", "description": "Deployed Prophet-based anomaly detection pipeline."},
+    {"source": "onshape-ptc", "target": "tech-isolation-forest", "relation": "used_technology", "description": "Combined Isolation Forest with Prophet for anomaly scoring."},
+    {"source": "onshape-ptc", "target": "tech-merlion", "relation": "evaluated_technology", "description": "Benchmarked Merlion for anomaly detection."},
+    {"source": "onshape-ptc", "target": "tech-lstm-ae", "relation": "evaluated_technology", "description": "Tested LSTM autoencoder for telemetry anomalies."},
+    {"source": "onshape-ptc", "target": "tech-looker", "relation": "used_technology", "description": "Built Looker dashboards for anomaly visibility."},
+    {"source": "pinecone", "target": "tech-sql", "relation": "used_technology", "description": "Developed dashboards and analyses with SQL."},
+    {"source": "pinecone", "target": "tech-sigma", "relation": "used_technology", "description": "Built executive dashboards in Sigma."},
+    {"source": "pinecone", "target": "tech-bigquery", "relation": "used_technology", "description": "Modeled data in BigQuery."},
+    {"source": "pinecone", "target": "tech-dbt", "relation": "used_technology", "description": "Implemented dbt transformations for analytics."},
+    {"source": "pinecone", "target": "tech-python", "relation": "used_technology", "description": "Ran churn modelling workflows in Python."},
+    {"source": "pinecone", "target": "tech-random-forest", "relation": "used_technology", "description": "Built Random Forest models for churn detection."}
+  ]
+}
