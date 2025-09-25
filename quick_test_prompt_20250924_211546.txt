@@ -1,0 +1,84 @@
+# Resume Chatbot Quick Test Results
+
+I tested a resume chatbot about a candidate named Yutian Yang. Please evaluate these responses as a hiring manager for data science roles.
+
+**Evaluation Criteria (Score 1-10):**
+- Accuracy: Is the information correct?
+- Completeness: Is there enough detail?
+- Clarity: Is it well-structured?
+- Relevance: Does it answer the question?
+
+**Test Results:**
+
+
+**Question 1:** What programming languages is Yutian proficient in?
+
+**Chatbot Answer:** Yutian Yang is experienced in SQL, Python, and R.
+
+**Sources:** 3 sources used
+
+---
+
+**Question 2:** Tell me about Yutian's experience with machine learning projects.
+
+**Chatbot Answer:** Unfortunately, I don't have specific information on Yutian Yang's experience with machine learning projects from the provided resume context. However, it is mentioned that he has taken courses in Statistical Machine Learning I and Statistical Methods of Machine Learning, which suggests some exposure to machine learning concepts. If you're looking for more detailed information on his machine learning project experience, I recommend reviewing his work or portfolio (if available) for further insights.
+
+**Sources:** 3 sources used
+
+---
+
+**Question 3:** What internships has Yutian completed and what did he accomplish?
+
+**Chatbot Answer:** Yutian Yang has completed three internships:
+
+1. Interned at Onshape by PTC (R&D Strategy) from June 2025 to August 2025, where he focused on R&D strategy with API telemetry analytics and AI feedback research. Highlights include:
+   - Implemented Prophet with Isolation Forest for anomaly detection
+   - Leveraged AWS Bedrock Titan Embeddings and Claude 3.5 Sonnet to cluster NPS feedback
+   - Built Looker dashboards and Slack automation for anomaly monitoring
+
+2. Interned at Pinecone from June 2024 to August 2024, where he supported go-to-market analytics and product intelligence. Highlights include:
+   - Designed Book of Business and Account 360 dashboards with SQL and Sigma
+   - Created dim_assistants schema in BigQuery and dbt
+   - Conducted churn analysis with Random Forest models resulting in 10% churn reduction
+
+3. Interned at Allschool from June 2022 to August 2022, where he worked as a Data Analyst Intern in Growth & BI with experimentation and dashboard automation initiatives. Highlights include:
+   - Executed A/B tests and segmentation analyses on traffic and revenue
+   - Evaluated multi-channel acquisition behaviour using SQL and BI tooling
+   - Developed Selenium web scraper and Looker Studio dashboard for real-time visibility
+
+**Sources:** 2 sources used
+
+---
+
+**Question 4:** How many years of experience does Yutian have in data science?
+
+**Chatbot Answer:** Based on the provided resume context, it appears that Yutian Yang has a Master's degree in Statistics from the University of California, Davis, which he completed between September 2021 and June 2023. This suggests that his graduate program took approximately 2 years to complete.
+
+Additionally, Yutian Yang also completed an internship at Onshape by PTC (R&D Strategy) from June 2025 to August 2025, which is about 6 months after completing his Master's degree. He also completed internships at Pinecone and Allschool in the preceding years, but the exact duration of these internships is not specified.
+
+Therefore, it can be inferred that Yutian Yang has a total of around 2-3 years of experience in data science, with some overlap between his graduate program and internship experiences.
+
+**Sources:** 3 sources used
+
+---
+
+**Question 5:** What cloud platforms and data tools has Yutian used?
+
+**Chatbot Answer:** Based on the provided resume context, Yutian Yang has experience with the following cloud platforms and data tools:
+
+Cloud Platforms:
+- AWS (as part of leveraging AWS Bedrock Titan Embeddings and Claude 3.5 Sonnet to cluster NPS feedback during his internship at Onshape by PTC)
+- GCP (as part of builds data pipelines with BigQuery, dbt, AWS, and ETL design)
+
+Data Tools:
+- BigQuery (used for modeling data and creating dim_assistants schema in dbt during his internship at Pinecone)
+- dbt (used for implementing dbt transformations for analytics during his internship at Pinecone)
+- Looker (developed Book of Business and Account 360 dashboards with SQL and Sigma, built Looker Studio dashboard for real-time visibility, and created dashboards and analyses with SQL during his internships at Onshape by PTC and Pinecone)
+- Sigma (built executive dashboards in Sigma during his internship at Pinecone)
+- Tableau (develops BI assets with)
+
+**Sources:** 3 sources used
+
+---
+
+**Your Task:** Please score each response (1-10) and provide overall feedback on the chatbot's performance for hiring decisions.

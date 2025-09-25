@@ -1,0 +1,454 @@
+[
+  {
+    "question_id": 1,
+    "category": "Technical Skills",
+    "question": "What programming languages is Yutian proficient in, and can you provide specific examples of how he has used them?",
+    "expected_keywords": [
+      "SQL",
+      "Python",
+      "R",
+      "examples",
+      "projects",
+      "experience"
+    ],
+    "chatbot_answer": "Yutian Yang is experienced in SQL, Python, and R. Specifically, he has implemented Prophet with Isolation Forest for anomaly detection during his internship at Onshape by PTC, leveraging AWS Bedrock Titan Embeddings and Claude 3.5 Sonnet to cluster NPS feedback. He also designed Book of Business and Account 360 dashboards with SQL and Sigma during his internship at Pinecone, and conducted churn analysis with Random Forest models resulting in a 10% churn reduction. Additionally, he developed Selenium web scraper and Looker Studio dashboard for real-time visibility during his internship at Allschool.",
+    "sources": [
+      {
+        "source": "resume_example.md",
+        "title": "Summary",
+        "score": 0.23766924329098918
+      },
+      {
+        "source": "knowledge_graph.json",
+        "title": "Yutian Yang",
+        "score": 0.1939158433617202
+      },
+      {
+        "source": "knowledge_graph.json",
+        "title": "Pinecone",
+        "score": 0.1514988863258904
+      }
+    ],
+    "response_time": 8.024488,
+    "timestamp": "2025-09-24T21:16:18.760357"
+  },
+  {
+    "question_id": 2,
+    "category": "Technical Skills",
+    "question": "What machine learning frameworks and libraries has Yutian worked with? Please provide specific details about his experience.",
+    "expected_keywords": [
+      "TensorFlow",
+      "Scikit-learn",
+      "Random Forest",
+      "CNN",
+      "specific projects"
+    ],
+    "chatbot_answer": "Based on the provided resume context, it appears that Yutian Yang has hands-on experience with several machine learning frameworks and libraries. Specifically, he is skilled in:\n\n1. Scikit-learn: He has hands-on experience with Scikit-learn, a popular Python library for machine learning.\n2. TensorFlow: Although not explicitly mentioned as an experience, his involvement in CNNs (Convolutional Neural Networks) and ResNet50 transfer learning suggests familiarity with TensorFlow.\n3. Random Forests: He implemented hyperparameter tuning with grid search using Random Forests during the Classification of Mushrooms Project.\n\nAdditionally, he has worked with other machine learning techniques such as:\n\n1. Kernel SVM: Used in the Classification of Mushrooms Project for image classification.\n2. CNNs (Convolutional Neural Networks): Also used in the Classification of Mushrooms Project for image classification.\n3. Time series techniques: He is skilled in time series techniques, although specific details about his experience are not provided.\n\nIt's worth noting that Yutian Yang also worked on a machine learning project with API telemetry analytics and AI feedback research during his internship at Onshape by PTC, but the specific machine learning frameworks or libraries used are not mentioned.",
+    "sources": [
+      {
+        "source": "resume_example.md",
+        "title": "Summary",
+        "score": 0.31964441805512506
+      },
+      {
+        "source": "knowledge_graph.json",
+        "title": "Yutian Yang",
+        "score": 0.21759728220203628
+      },
+      {
+        "source": "resume_example.md",
+        "title": "University of California, Davis \u2014 M.S. Statistics (Sep 2021 \u2013 Jun 2023)",
+        "score": 0.14609579702665254
+      }
+    ],
+    "response_time": 14.358475,
+    "timestamp": "2025-09-24T21:16:33.625221"
+  },
+  {
+    "question_id": 3,
+    "category": "Technical Skills",
+    "question": "What experience does Yutian have with cloud platforms and data engineering tools?",
+    "expected_keywords": [
+      "AWS",
+      "GCP",
+      "BigQuery",
+      "dbt",
+      "data pipelines"
+    ],
+    "chatbot_answer": "Based on the provided resume context, Yutian Yang has experience with the following cloud platforms:\n\n1. AWS (as part of leveraging AWS Bedrock Titan Embeddings and Claude 3.5 Sonnet to cluster NPS feedback during his internship at Onshape by PTC)\n2. GCP (as part of builds data pipelines with BigQuery, dbt, AWS, and ETL design)\n\nRegarding data engineering tools, Yutian Yang has experience with:\n\n1. BigQuery (used for modeling data and creating dim_assistants schema in dbt during his internship at Pinecone)\n2. dbt (used for implementing dbt transformations for analytics during his internship at Pinecone)\n3. Looker (developed Book of Business and Account 360 dashboards with SQL and Sigma, built Looker Studio dashboard for real-time visibility, and created dashboards and analyses with SQL during his internships at Onshape by PTC and Pinecone)\n\nAdditionally, Yutian Yang is skilled in ETL development and schema design.",
+    "sources": [
+      {
+        "source": "resume_example.md",
+        "title": "Summary",
+        "score": 0.21416061236038386
+      },
+      {
+        "source": "knowledge_graph.json",
+        "title": "Yutian Yang",
+        "score": 0.20117899290065705
+      },
+      {
+        "source": "resume_example.md",
+        "title": "Skills",
+        "score": 0.1209708488999891
+      }
+    ],
+    "response_time": 13.940073,
+    "timestamp": "2025-09-24T21:16:48.070200"
+  },
+  {
+    "question_id": 4,
+    "category": "Experience",
+    "question": "Can you walk me through Yutian's professional experience and internships? What were his key responsibilities and achievements?",
+    "expected_keywords": [
+      "Onshape",
+      "Pinecone",
+      "Allschool",
+      "responsibilities",
+      "achievements",
+      "results"
+    ],
+    "chatbot_answer": "Based on the provided resume context, Yutian Yang has a Master's degree in Statistics from the University of California, Davis, which he completed between September 2021 and June 2023. This suggests that his graduate program took approximately 2 years to complete.\n\nDuring this time, Yutian Yang also completed internships at Onshape by PTC (R&D Strategy) from June 2025 to August 2025, Pinecone, and Allschool in preceding years. Although the exact duration of these internships is not specified, it can be inferred that he gained valuable experience in data science and analytics during this period.\n\nAt Onshape by PTC, Yutian Yang worked on leveraging AWS Bedrock Titan Embeddings and Claude 3.5 Sonnet to cluster NPS feedback. He also implemented Prophet with Isolation Forest for anomaly detection and designed Book of Business and Account 360 dashboards with SQL and Sigma. Additionally, he developed a Selenium web scraper and built a Looker Studio dashboard for real-time visibility.\n\nAt Pinecone, Yutian Yang used BigQuery for modeling data and created a dim_assistants schema in dbt. He also implemented dbt transformations for analytics and designed Book of Business and Account 360 dashboards with SQL and Sigma.\n\nAt Allschool, Yutian Yang developed BI assets with Tableau and conducted churn analysis using Random Forest models that resulted in a 10% churn reduction.\n\nOverall, Yutian Yang's professional experience and internships demonstrate his skills in building end-to-end machine learning pipelines, automating analytics workflows, and communicating findings with stakeholders.",
+    "sources": [
+      {
+        "source": "resume_example.md",
+        "title": "Summary",
+        "score": 0.2439984507261627
+      }
+    ],
+    "response_time": 14.100598,
+    "timestamp": "2025-09-24T21:17:02.674595"
+  },
+  {
+    "question_id": 5,
+    "category": "Experience",
+    "question": "What specific projects has Yutian worked on, and what were the outcomes or impact of these projects?",
+    "expected_keywords": [
+      "anomaly detection",
+      "churn analysis",
+      "dashboard",
+      "impact",
+      "results",
+      "metrics"
+    ],
+    "chatbot_answer": "Based on the provided resume context, Yutian Yang has worked on several projects. Some notable projects include:\n\n1. Classification of Mushrooms Project: This project involved collaborating with others to develop mushroom classification models using Random Forest, Kernel SVM, CNNs, and ResNet50 transfer learning. The outcomes of this project are not specified in the provided resume context.\n\n2. Internship at Onshape by PTC (R&D Strategy): During this internship, Yutian Yang worked on leveraging AWS Bedrock Titan Embeddings and Claude 3.5 Sonnet to cluster NPS feedback. He also implemented Prophet with Isolation Forest for anomaly detection and designed Book of Business and Account 360 dashboards with SQL and Sigma.\n\n3. Internship at Pinecone: At Pinecone, Yutian Yang used BigQuery for modeling data and created a dim_assistants schema in dbt. He also implemented dbt transformations for analytics and designed Book of Business and Account 360 dashboards with SQL and Sigma. Additionally, he conducted churn analysis using Random Forest models that resulted in a 10% churn reduction.\n\n4. Internship at Allschool: At Allschool, Yutian Yang developed BI assets with Tableau and conducted churn analysis using Random Forest models that resulted in a 10% churn reduction.\n\nThe outcomes or impact of these projects are not explicitly stated in the provided resume context. However, it can be inferred that Yutian Yang's work on these projects has contributed to his skills in building end-to-end machine learning pipelines, automating analytics workflows, and communicating findings with stakeholders.",
+    "sources": [
+      {
+        "source": "knowledge_graph.json",
+        "title": "Yutian Yang",
+        "score": 0.36370673994337127
+      },
+      {
+        "source": "resume_example.md",
+        "title": "Summary",
+        "score": 0.14932952787268358
+      }
+    ],
+    "response_time": 17.737934,
+    "timestamp": "2025-09-24T21:17:20.918666"
+  },
+  {
+    "question_id": 6,
+    "category": "Experience",
+    "question": "How many years of relevant experience does Yutian have in data science and analytics?",
+    "expected_keywords": [
+      "years",
+      "experience",
+      "internships",
+      "academic",
+      "timeline"
+    ],
+    "chatbot_answer": "Based on the provided resume context, it appears that Yutian Yang has approximately 2 years of relevant experience in data science and analytics. This is inferred from his Master's degree in Statistics at the University of California, Davis, which he completed between September 2021 and June 2023.",
+    "sources": [
+      {
+        "source": "resume_example.md",
+        "title": "Summary",
+        "score": 0.30904282751373174
+      },
+      {
+        "source": "knowledge_graph.json",
+        "title": "Yutian Yang",
+        "score": 0.28220423396829997
+      },
+      {
+        "source": "resume_example.md",
+        "title": "University of California, Davis \u2014 B.S. Statistics & Economics (Sep 2017 \u2013 Jun 2021)",
+        "score": 0.23577152887148872
+      }
+    ],
+    "response_time": 9.800162,
+    "timestamp": "2025-09-24T21:17:31.223586"
+  },
+  {
+    "question_id": 7,
+    "category": "Education",
+    "question": "What is Yutian's educational background, and how does it relate to data science roles?",
+    "expected_keywords": [
+      "Statistics",
+      "UC Davis",
+      "Master's",
+      "Bachelor's",
+      "relevant coursework"
+    ],
+    "chatbot_answer": "Yutian Yang has a Master of Science in Statistics from the University of California, Davis, which he completed between September 2021 and June 2023. This graduate program suggests that Yutian Yang gained advanced knowledge and skills in statistical computing, machine learning, and optimization, which are highly relevant to data science roles.\n\nAdditionally, Yutian Yang also holds a Bachelor of Science in Statistics and Economics from the University of California, Davis, which he completed between September 2017 and June 2021. This undergraduate degree provides a solid foundation in statistical theory, econometrics, and data analysis, which are essential skills for data science professionals.\n\nYutian Yang's educational background demonstrates his commitment to developing strong technical skills in statistics, machine learning, and data engineering, making him well-equipped for roles in data science and analytics.",
+    "sources": [
+      {
+        "source": "resume_example.md",
+        "title": "University of California, Davis \u2014 B.S. Statistics & Economics (Sep 2017 \u2013 Jun 2021)",
+        "score": 0.4241852158526138
+      },
+      {
+        "source": "resume_example.md",
+        "title": "University of California, Davis \u2014 M.S. Statistics (Sep 2021 \u2013 Jun 2023)",
+        "score": 0.1914981387848477
+      },
+      {
+        "source": "knowledge_graph.json",
+        "title": "Yutian Yang",
+        "score": 0.1364249700577076
+      }
+    ],
+    "response_time": 13.069641,
+    "timestamp": "2025-09-24T21:17:44.799686"
+  },
+  {
+    "question_id": 8,
+    "category": "Research",
+    "question": "Tell me about Yutian's research experience and any publications or significant findings.",
+    "expected_keywords": [
+      "research assistant",
+      "UC Davis",
+      "procrastination",
+      "behavioral",
+      "Professor Chakraborty"
+    ],
+    "chatbot_answer": "Based on the provided resume context, Yutian Yang has research experience as a Research Assistant at the University of California, Davis Department of Economics. During this role (July 2020 to September 2020), he worked with Professor Anujit Chakraborty and applied bootstrapping to expand the dataset to 20,000 observations. He also used logistic regression and GLMs to study behavioural trends and implemented Lasso regularisation to address multicollinearity.\n\nHowever, there is no mention of any publications or significant findings in the provided resume context.",
+    "sources": [
+      {
+        "source": "resume_example.md",
+        "title": "Summary",
+        "score": 0.2727017377424298
+      },
+      {
+        "source": "resume_example.md",
+        "title": "Research Assistant \u2014 UC Davis Department of Economics (Jul 2020 \u2013 Sep 2020, Davis, CA)",
+        "score": 0.07874944811485576
+      },
+      {
+        "source": "knowledge_graph.json",
+        "title": "Yutian Yang",
+        "score": 0.04596074271429418
+      }
+    ],
+    "response_time": 11.414991,
+    "timestamp": "2025-09-24T21:17:56.720922"
+  },
+  {
+    "question_id": 9,
+    "category": "Soft Skills",
+    "question": "What evidence is there that Yutian can effectively communicate technical findings to stakeholders?",
+    "expected_keywords": [
+      "stakeholders",
+      "communication",
+      "dashboards",
+      "presentations",
+      "insights"
+    ],
+    "chatbot_answer": "Based on the provided resume context, it appears that Yutian Yang has experience communicating his findings with stakeholders across various teams. As a Data Science Intern at Onshape by PTC (R&D Strategy), he built Looker dashboards and Slack automation for anomaly monitoring, which suggests that he can effectively communicate technical insights to stakeholders.\n\nAdditionally, as a Data Analyst Intern at Allschool, Yutian Yang developed Selenium web scraper and Looker Studio dashboard for real-time visibility. This project highlights his ability to create visualizations and automate workflows, which can help communicate complex data insights to stakeholders.\n\nFurthermore, as a Research Assistant at the University of California, Davis Department of Economics, Yutian Yang used logistic regression and GLMs to study behavioural trends and implemented Lasso regularisation to address multicollinearity. This experience demonstrates his ability to present technical findings in a clear and actionable manner, which can be applied to communicating insights with stakeholders.\n\nWhile there is no explicit mention of Yutian's communication skills or experience in the provided resume context, these examples suggest that he has the potential to effectively communicate technical findings to stakeholders.",
+    "sources": [
+      {
+        "source": "resume_example.md",
+        "title": "Summary",
+        "score": 0.2727017377424298
+      },
+      {
+        "source": "knowledge_graph.json",
+        "title": "Yutian Yang",
+        "score": 0.199163218428608
+      },
+      {
+        "source": "resume_example.md",
+        "title": "Research Assistant \u2014 UC Davis Department of Economics (Jul 2020 \u2013 Sep 2020, Davis, CA)",
+        "score": 0.07874944811485575
+      }
+    ],
+    "response_time": 14.617745,
+    "timestamp": "2025-09-24T21:18:11.847195"
+  },
+  {
+    "question_id": 10,
+    "category": "Leadership",
+    "question": "Does Yutian have any leadership or mentoring experience?",
+    "expected_keywords": [
+      "mentor",
+      "WiML",
+      "organizer",
+      "meetup",
+      "leadership"
+    ],
+    "chatbot_answer": "Based on the provided resume context, it appears that Yutian Yang has some leadership and mentoring experience. As a mentor with the Women in Machine Learning Mentorship Program, he is actively involved in guiding and supporting junior data scientists and machine learning professionals. Additionally, as an organizer for the 1,200+ member Seattle Applied AI Meetup, he demonstrates leadership skills by coordinating events and fostering a community of like-minded individuals.\n\nHowever, it's worth noting that there is no explicit mention of Yutian having formal leadership roles or responsibilities in his previous internships or research positions.",
+    "sources": [
+      {
+        "source": "knowledge_graph.json",
+        "title": "Yutian Yang",
+        "score": 0.23802142780326313
+      },
+      {
+        "source": "resume_example.md",
+        "title": "Summary",
+        "score": 0.22818179128287688
+      }
+    ],
+    "response_time": 10.058383,
+    "timestamp": "2025-09-24T21:18:22.411349"
+  },
+  {
+    "question_id": 11,
+    "category": "Industry Knowledge",
+    "question": "What industries has Yutian worked in, and what domain knowledge does he bring?",
+    "expected_keywords": [
+      "industries",
+      "domains",
+      "CAD",
+      "vector databases",
+      "education",
+      "analytics"
+    ],
+    "chatbot_answer": "Based on the provided resume context, it appears that Yutian Yang has worked in the following industries:\n\n* Product (as a Data Science Intern at Onshape by PTC)\n* Growth & BI (as a Data Analyst Intern at Allschool)\n* Research and academia (as a Research Assistant at the University of California, Davis Department of Economics)\n\nIn terms of domain knowledge, Yutian Yang brings expertise in:\n\n* Machine learning and analytics\n* Data engineering and pipeline development\n* Business intelligence and analytics\n* Statistical computing and optimization\n\nAdditionally, his experience working with various tools and technologies, such as AWS, GCP, BigQuery, dbt, Tableau, Power BI, Looker, Sigma, and Google Analytics, suggests that he has a broad range of skills in data analysis and visualization.",
+    "sources": [
+      {
+        "source": "resume_example.md",
+        "title": "Summary",
+        "score": 0.3586375205109857
+      },
+      {
+        "source": "knowledge_graph.json",
+        "title": "Yutian Yang",
+        "score": 0.23802142780326307
+      }
+    ],
+    "response_time": 10.705477,
+    "timestamp": "2025-09-24T21:18:33.623764"
+  },
+  {
+    "question_id": 12,
+    "category": "Problem Solving",
+    "question": "Can you describe a challenging technical problem Yutian solved and how he approached it?",
+    "expected_keywords": [
+      "problem",
+      "solution",
+      "approach",
+      "methodology",
+      "challenge"
+    ],
+    "chatbot_answer": "I don't know. The provided resume context does not mention a specific challenging technical problem that Yutian Yang solved. It highlights his skills and experience in various areas, such as machine learning, data engineering, and business intelligence, but does not provide details about a particular challenge he faced and how he approached it.",
+    "sources": [
+      {
+        "source": "resume_example.md",
+        "title": "Summary",
+        "score": 0.35863752051098563
+      },
+      {
+        "source": "knowledge_graph.json",
+        "title": "Yutian Yang",
+        "score": 0.2380214278032631
+      }
+    ],
+    "response_time": 7.935009,
+    "timestamp": "2025-09-24T21:18:42.064858"
+  },
+  {
+    "question_id": 13,
+    "category": "Data Analysis",
+    "question": "What types of data analysis has Yutian performed, and what tools does he use for visualization and reporting?",
+    "expected_keywords": [
+      "analysis",
+      "Tableau",
+      "Looker",
+      "Power BI",
+      "visualization",
+      "reporting"
+    ],
+    "chatbot_answer": "Based on the provided resume context, Yutian Yang has performed various types of data analysis, including:\n\n* Analyzing procrastination and present-biased behaviour with Professor Anujit Chakraborty (as a Research Assistant at UC Davis Department of Economics)\n* Conducting churn analysis with Random Forest models resulting in 10% churn reduction (as a Data Science Intern at Allschool)\n* Executing A/B tests and segmentation analyses on traffic and revenue (as a Data Analyst Intern at Allschool)\n* Studying behavioural trends using logistic regression and GLMs (as a Research Assistant at UC Davis Department of Economics)\n\nYutian Yang uses various tools for visualization and reporting, including:\n\n* Tableau\n* Power BI\n* Looker\n* Sigma\n* Google Analytics\n\nHe also uses programming languages such as SQL, Python, and R, and is skilled in machine learning with Scikit-learn, TensorFlow, Random Forests, SVM, CNN, and time series techniques.",
+    "sources": [
+      {
+        "source": "resume_example.md",
+        "title": "Summary",
+        "score": 0.3749308772034395
+      },
+      {
+        "source": "knowledge_graph.json",
+        "title": "Yutian Yang",
+        "score": 0.24252752611298847
+      },
+      {
+        "source": "resume_example.md",
+        "title": "University of California, Davis \u2014 M.S. Statistics (Sep 2021 \u2013 Jun 2023)",
+        "score": 0.14417021988664377
+      }
+    ],
+    "response_time": 12.329508,
+    "timestamp": "2025-09-24T21:18:54.900850"
+  },
+  {
+    "question_id": 14,
+    "category": "Experimentation",
+    "question": "Does Yutian have experience with A/B testing and statistical experimentation?",
+    "expected_keywords": [
+      "A/B testing",
+      "experimentation",
+      "statistical",
+      "segmentation",
+      "hypothesis"
+    ],
+    "chatbot_answer": "Yes, based on the provided resume context, it appears that Yutian Yang has experience with A/B testing and statistical experimentation. As a Data Analyst Intern at Allschool, he executed A/B tests and segmentation analyses on traffic and revenue, which suggests that he has hands-on experience with this type of analysis. Additionally, his research assistant role at UC Davis Department of Economics involved studying behavioural trends using logistic regression and GLMs, which implies that he is familiar with statistical experimentation methods.",
+    "sources": [
+      {
+        "source": "resume_example.md",
+        "title": "Summary",
+        "score": 0.2199462376010206
+      },
+      {
+        "source": "knowledge_graph.json",
+        "title": "Yutian Yang",
+        "score": 0.2074856515160781
+      },
+      {
+        "source": "resume_example.md",
+        "title": "University of California, Davis \u2014 M.S. Statistics (Sep 2021 \u2013 Jun 2023)",
+        "score": 0.1798287332415679
+      }
+    ],
+    "response_time": 9.179556,
+    "timestamp": "2025-09-24T21:19:04.585414"
+  },
+  {
+    "question_id": 15,
+    "category": "Recent Work",
+    "question": "What has Yutian been working on most recently, and what are his current interests or focus areas?",
+    "expected_keywords": [
+      "recent",
+      "current",
+      "latest",
+      "2024",
+      "2025",
+      "focus",
+      "interests"
+    ],
+    "chatbot_answer": "Based on the provided resume context, it appears that Yutian Yang's most recent work experience was as a Data Science Intern at Pinecone, where he supported go-to-market analytics and product intelligence. However, I don't have information about his current interests or focus areas.\n\nAs an organizer for the 1,200+ member Seattle Applied AI Meetup, Yutian Yang is likely involved in community-building and networking efforts related to artificial intelligence and machine learning. Additionally, as a mentor with the Women in Machine Learning Mentorship Program, he may be focused on supporting junior data scientists and machine learning professionals.\n\nIt's worth noting that his current interests or focus areas are not explicitly stated in the provided resume context.",
+    "sources": [
+      {
+        "source": "knowledge_graph.json",
+        "title": "Yutian Yang",
+        "score": 0.23802142780326313
+      },
+      {
+        "source": "resume_example.md",
+        "title": "Summary",
+        "score": 0.2281817912828769
+      }
+    ],
+    "response_time": 9.906267,
+    "timestamp": "2025-09-24T21:19:14.998937"
+  }
+]

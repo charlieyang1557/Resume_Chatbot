@@ -4,6 +4,8 @@ from __future__ import annotations
 
 import os
 import re
+import json
+import requests
 from abc import ABC, abstractmethod
 from typing import List, Optional, Sequence, Tuple
 
@@ -146,6 +148,97 @@ class OpenAIChatLLM(BaseLLM):
         return (choice.message.content or "").strip()
 
 
+class OllamaLLM(BaseLLM):
+    """Wrapper around the Ollama API for local LLM inference."""
+
+    def __init__(
+        self,
+        *,
+        model: str = "llama3.2:3b",
+        base_url: str = "http://localhost:11434",
+        temperature: float = 0.1,
+    ) -> None:
+        self.model = model
+        self.base_url = base_url.rstrip("/")
+        self.temperature = temperature
+
+    def _format_prompt(
+        self,
+        question: str,
+        context: str,
+        *,
+        system_prompt: Optional[str],
+        chat_history: Optional[ChatHistory],
+    ) -> str:
+        """Format the prompt for Ollama."""
+        prompt_parts = []
+        
+        if system_prompt:
+            prompt_parts.append(f"System: {system_prompt}")
+        
+        # Add chat history if provided
+        if chat_history:
+            for user_turn, assistant_turn in chat_history:
+                prompt_parts.append(f"Human: {user_turn}")
+                prompt_parts.append(f"Assistant: {assistant_turn}")
+        
+        # Add the main context and question
+        main_prompt = (
+            "You are helping someone ask questions about a resume. "
+            "Use only the supplied resume context to answer succinctly and professionally. "
+            "Provide complete sentences and well-structured responses. "
+            "IMPORTANT: Always use the correct pronouns as specified in the resume context. "
+            "If pronouns are specified (e.g., he/him/his), use them consistently throughout your response. "
+            "If the context is insufficient, say you don't know.\n\n"
+            f"Resume context:\n{context}\n\n"
+            f"Question: {question}\n\n"
+            "Answer:"
+        )
+        prompt_parts.append(main_prompt)
+        
+        return "\n\n".join(prompt_parts)
+
+    def generate(
+        self,
+        question: str,
+        context: str,
+        *,
+        system_prompt: Optional[str] = None,
+        chat_history: Optional[ChatHistory] = None,
+    ) -> str:
+        prompt = self._format_prompt(
+            question,
+            context,
+            system_prompt=system_prompt,
+            chat_history=chat_history,
+        )
+        
+        try:
+            response = requests.post(
+                f"{self.base_url}/api/generate",
+                json={
+                    "model": self.model,
+                    "prompt": prompt,
+                    "stream": False,
+                    "options": {
+                        "temperature": self.temperature,
+                    }
+                },
+                timeout=30,
+            )
+            response.raise_for_status()
+            
+            result = response.json()
+            return result.get("response", "").strip()
+            
+        except requests.exceptions.RequestException as e:
+            return f"Error connecting to Ollama: {str(e)}"
+        except json.JSONDecodeError:
+            return "Error parsing response from Ollama"
+        except Exception as e:
+            return f"Unexpected error: {str(e)}"
+
+
 def create_llm(backend: str) -> BaseLLM:
     """Factory function that creates an LLM backend by name."""
 
@@ -154,4 +247,6 @@ def create_llm(backend: str) -> BaseLLM:
         return SimpleLLM()
     if backend == "openai":
         return OpenAIChatLLM()
-    raise ValueError("Unsupported LLM backend. Choose 'simple' or 'openai'.")
+    if backend == "ollama":
+        return OllamaLLM()
+    raise ValueError("Unsupported LLM backend. Choose 'simple', 'openai', or 'ollama'.")

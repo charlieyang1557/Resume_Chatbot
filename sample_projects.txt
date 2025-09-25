@@ -1,0 +1,33 @@
+## Machine Learning Projects
+
+### Real-time Anomaly Detection System
+Built a comprehensive anomaly detection pipeline for API telemetry data at PTC Onshape. Implemented multiple algorithms including Prophet for time series forecasting, Isolation Forest for outlier detection, and LSTM-AE for deep learning-based anomaly detection. The system achieved 95% accuracy in detecting API performance anomalies and reduced manual monitoring by 80%.
+
+Technologies: Python, Prophet, Isolation Forest, Merlion, LSTM, AWS Bedrock, Claude 3.5 Sonnet
+
+### Customer Churn Prediction Model
+Developed a Random Forest-based churn prediction model at Pinecone that identified key customer behavior patterns. The model analyzed 15+ customer metrics and achieved 87% accuracy in predicting churn risk. Implemented automated alerts and dashboard visualizations that helped reduce customer churn by 10%.
+
+Technologies: Python, Scikit-learn, Random Forest, SQL, BigQuery, Sigma
+
+### Mushroom Classification Project
+Team project building ML/DL models to classify mushrooms as edible vs poisonous using multiple approaches. Implemented Random Forest, Kernel SVM, and CNN models with grid search hyperparameter tuning. Applied transfer learning with pre-trained ResNet50 to improve efficiency and accuracy.
+
+Technologies: Python, Scikit-learn, TensorFlow, CNN, ResNet50, Grid Search
+
+### Behavioral Analysis Research
+Conducted research on procrastination and present-bias using GLM and Logistic Regression at UC Davis. Analyzed 20,000+ samples using bootstrapping techniques and addressed multicollinearity using Lasso regularization. Results provided insights for tech product design to enhance user satisfaction and retention.
+
+Technologies: R, GLM, Logistic Regression, Bootstrapping, Lasso Regularization
+
+## Data Engineering Projects
+
+### Automated ETL Pipeline
+Built end-to-end ETL pipelines processing 10TB+ of daily data using Python, Airflow, and cloud platforms. Implemented data quality checks, automated monitoring, and error handling that reduced manual intervention by 90%.
+
+Technologies: Python, Apache Airflow, AWS, GCP, BigQuery, DBT
+
+### Real-time Dashboard System
+Created comprehensive business intelligence dashboards using Looker and Tableau that provided real-time insights to stakeholders. Implemented Row-Level Security for tailored views and automated reporting that reduced manual reporting time by 70%.
+
+Technologies: SQL, Looker, Tableau, Power BI, Sigma, Google Analytics

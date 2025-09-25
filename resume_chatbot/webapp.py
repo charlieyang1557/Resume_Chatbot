@@ -338,7 +338,7 @@ def _render_index_html() -> str:
 def create_app(
     *,
     resume_directory: Path = Path("data/resume"),
-    llm_backend: str = "simple",
+    llm_backend: str = "ollama",
     top_k: int = 3,
 ) -> FastAPI:
     """Create a FastAPI app backed by the resume chatbot."""

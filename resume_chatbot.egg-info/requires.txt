@@ -1,0 +1,9 @@
+typer>=0.9
+rich>=13
+python-dotenv>=1.0
+openai>=1.14
+fastapi>=0.110
+uvicorn>=0.29
+
+[dev]
+pytest>=7.4

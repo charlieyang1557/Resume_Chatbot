@@ -1,0 +1,9 @@
+I'm Yutian Yang, a passionate data scientist and analytics engineer with a strong background in machine learning, statistical analysis, and data engineering. I specialize in building end-to-end ML pipelines, automating analytics workflows, and communicating findings with stakeholders across product, growth, and research teams.
+
+My technical expertise spans Python, SQL, R, and various ML frameworks including Scikit-learn, TensorFlow, and time series analysis tools. I have hands-on experience with cloud platforms like AWS and GCP, data engineering tools like BigQuery and DBT, and visualization platforms including Tableau, Power BI, and Looker.
+
+In my recent role at PTC Onshape, I built unsupervised anomaly detection systems for API telemetry using Prophet, Isolation Forest, and LSTM-AE models. I also developed AI-powered NPS analysis pipelines using AWS Bedrock and Claude 3.5 Sonnet for sentiment analysis and theme extraction.
+
+At Pinecone, I designed and built comprehensive dashboards that improved sales operations by 15% and developed churn analysis models using Random Forest that reduced churn by 10%. I'm passionate about turning complex data into actionable insights that drive business decisions.
+
+I hold a Master's degree in Statistics from UC Davis and enjoy working on projects that combine statistical rigor with practical business applications. When I'm not coding, I love exploring new ML techniques and contributing to open-source projects.

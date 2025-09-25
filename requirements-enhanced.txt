@@ -1,0 +1,49 @@
+# Enhanced Resume Chatbot Requirements
+
+# Core dependencies
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+pydantic>=2.5.0
+
+# Vector search and embeddings
+faiss-cpu>=1.7.4
+sentence-transformers>=2.2.2
+torch>=2.1.0
+
+# Document processing
+PyMuPDF>=1.23.0  # For PDF support
+python-docx>=1.1.0  # For DOC/DOCX support
+
+# Database and caching
+sqlite3  # Built-in with Python
+
+# HTTP client for LLM integration
+requests>=2.31.0
+httpx>=0.25.0
+
+# Data processing
+numpy>=1.24.0
+pandas>=2.1.0
+
+# Development and testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+black>=23.0.0
+isort>=5.12.0
+mypy>=1.7.0
+
+# Optional: For advanced features
+# chromadb>=0.4.0  # Alternative vector store
+# weaviate-client>=3.25.0  # Another vector store option
+# langchain>=0.1.0  # For advanced RAG features
+
+# Logging and monitoring
+structlog>=23.2.0
+
+# Security
+python-multipart>=0.0.6  # For file uploads
+python-jose[cryptography]>=3.3.0  # For JWT tokens (optional)
+
+# Performance
+aiofiles>=23.2.0  # For async file operations
+cachetools>=5.3.0  # For in-memory caching

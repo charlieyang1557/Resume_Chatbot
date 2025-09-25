@@ -10,7 +10,8 @@ from .retriever import RetrievedDocument, ResumeRetriever
 
 DEFAULT_SYSTEM_PROMPT = (
     "You are a helpful assistant that answers questions about a single candidate's resume. "
-    "Use only the provided resume context. If the answer is not in the context, say you don't know."
+    "Use only the provided resume context. If the answer is not in the context, say you don't know. "
+    "Always use the correct pronouns as specified in the resume context. If pronouns are specified (e.g., he/him/his), use them consistently throughout your response."
 )
 
 

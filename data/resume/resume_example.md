@@ -1,7 +1,7 @@
 # Yutian Yang
 
 ## Summary
-Data scientist and analytics engineer with experience turning experimentation, telemetry, and feedback data into product insights. Skilled at building end-to-end machine learning pipelines, automating analytics workflows, and communicating findings with stakeholders across product, growth, and research teams.
+Yutian Yang (he/him/his) is a data scientist and analytics engineer with experience turning experimentation, telemetry, and feedback data into product insights. He is skilled at building end-to-end machine learning pipelines, automating analytics workflows, and communicating findings with stakeholders across product, growth, and research teams.
 
 ## Contact
 - Phone: +1-501-368-9640

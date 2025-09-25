@@ -1,7 +1,7 @@
 {
   "title": "Yutian Yang Resume Knowledge Graph",
   "nodes": [
-    {"id": "yutian-yang", "label": "Yutian Yang", "type": "Person"},
+    {"id": "yutian-yang", "label": "Yutian Yang", "type": "Person", "pronouns": "he/him/his", "gender": "male"},
     {"id": "onshape-ptc", "label": "Onshape by PTC (R&D Strategy)", "type": "Organization"},
     {"id": "pinecone", "label": "Pinecone", "type": "Organization"},
     {"id": "allschool", "label": "Allschool", "type": "Organization"},

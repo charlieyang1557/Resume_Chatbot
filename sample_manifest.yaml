@@ -1,0 +1,13 @@
+- text_file: "sample_about.txt"
+  source: "website"
+  section: "About Me"
+  url: "https://charlieyang1557.github.io/aboutme/"
+  date_range: ""
+  id_prefix: "website#about"
+
+- text_file: "sample_projects.txt"
+  source: "website"
+  section: "Projects"
+  url: "https://charlieyang1557.github.io/aboutme/"
+  date_range: ""
+  id_prefix: "website#projects"
