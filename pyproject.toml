@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "resume-chatbot"
+version = "0.1.0"
+description = "A retrieval-augmented generation (RAG) chatbot for answering questions about a resume."
+readme = "README.md"
+authors = [{name = "Your Name", email = "you@example.com"}]
+requires-python = ">=3.10"
+dependencies = [
+    "typer>=0.9",
+    "rich>=13",
+    "python-dotenv>=1.0",
+    "openai>=1.14",
+    "fastapi>=0.110",
+    "uvicorn>=0.29",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+]
+
+[project.urls]
+Homepage = "https://example.com"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["resume_chatbot*"]
