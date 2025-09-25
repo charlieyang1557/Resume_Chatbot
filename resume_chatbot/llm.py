@@ -5,9 +5,14 @@ from __future__ import annotations
 import os
 import re
 import json
-import requests
 from abc import ABC, abstractmethod
 from typing import List, Optional, Sequence, Tuple
+
+
+try:  # pragma: no cover - import guard exercised indirectly
+    import requests  # type: ignore[import]
+except ImportError:  # pragma: no cover - exercised when dependency missing
+    requests = None  # type: ignore[assignment]
 
 
 ChatHistory = Sequence[Tuple[str, str]]
@@ -158,6 +163,10 @@ class OllamaLLM(BaseLLM):
         base_url: str = "http://localhost:11434",
         temperature: float = 0.1,
     ) -> None:
+        if requests is None:  # pragma: no cover - simple guard
+            raise ImportError(
+                "The 'requests' package is required for OllamaLLM. Install resume-chatbot with the 'ollama' extra."
+            )
         self.model = model
         self.base_url = base_url.rstrip("/")
         self.temperature = temperature
@@ -214,6 +223,7 @@ class OllamaLLM(BaseLLM):
         )
         
         try:
+            assert requests is not None  # for type-checkers
             response = requests.post(
                 f"{self.base_url}/api/generate",
                 json={

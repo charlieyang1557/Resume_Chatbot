@@ -9,6 +9,7 @@ from dataclasses import dataclass
 from typing import Iterable, List, Sequence
 
 from .data_loader import Document
+from .text_utils import tokenize_with_aliases
 
 _STOPWORDS = {
     "a",
@@ -38,8 +39,7 @@ _TOKEN_PATTERN = re.compile(r"[a-zA-Z0-9']+")
 
 
 def _tokenise(text: str) -> list[str]:
-    tokens = [token.lower() for token in _TOKEN_PATTERN.findall(text)]
-    return [token for token in tokens if token not in _STOPWORDS]
+    return tokenize_with_aliases(text, stopwords=_STOPWORDS, pattern=_TOKEN_PATTERN)
 
 
 def _compute_idf(tokenised_documents: Sequence[Sequence[str]]) -> dict[str, float]:
