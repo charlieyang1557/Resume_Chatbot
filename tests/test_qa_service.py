@@ -72,3 +72,29 @@ def test_resume_qa_application_initializes(tmp_path: Path, sample_records: list[
     assert app.ready
     stats = app.stats()
     assert stats.total_records == len(sample_records)
+
+
+def test_charlie_and_yutian_alias_are_equivalent() -> None:
+    alias_record = CorpusRecord(
+        id="summary-1",
+        source="resume",
+        section="Summary",
+        date_range="",
+        skills=["SQL", "Python"],
+        text="Yutian Yang—data scientist and analytics engineer focused on SQL and Python projects.",
+    )
+
+    engine = SimpleSearchEngine()
+    results = engine.search("Who is Charlie?", [alias_record], top_k=1)
+    assert results and results[0].record.id == alias_record.id
+
+    service = ResumeQAService(
+        records=[alias_record],
+        search_engine=engine,
+        prompt_builder=PromptBuilder(),
+        language_model=MockLanguageModel(),
+    )
+    answer = service.answer_question("Who is Charlie?")
+    assert "I don't have" not in answer.answer
+    assert "Yutian Yang" in answer.answer
+

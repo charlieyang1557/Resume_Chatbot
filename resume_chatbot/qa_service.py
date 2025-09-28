@@ -13,6 +13,9 @@ import re
 from data_loader import CorpusLoader, CorpusRecord
 from prompt_templates import PromptBuilder, PromptTemplates
 
+from .text_utils import expand_aliases, tokenize_with_aliases
+
+
 
 class SearchEngine(Protocol):
     """Protocol describing the minimal search interface required."""
@@ -105,11 +108,8 @@ class SimpleSearchEngine:
     }
 
     def _tokenize(self, text: str) -> List[str]:
-        return [
-            token
-            for token in re.findall(r"\b\w+\b", text.lower())
-            if token not in self._STOPWORDS
-        ]
+        return tokenize_with_aliases(text, stopwords=self._STOPWORDS)
+
 
     def _section_weight(self, section: str) -> float:
         section_lower = section.lower()
@@ -226,6 +226,8 @@ class MockLanguageModel:
             for token in re.findall(r"\b\w+\b", question.lower())
             if len(token) > 3
         ]
+        keywords = expand_aliases(keywords)
+
         results: List[Tuple[str, str]] = []
         seen: set[str] = set()
         for item in context:

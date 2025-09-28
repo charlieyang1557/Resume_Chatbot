@@ -120,6 +120,8 @@ def build_simple_prompt(question: str, search_results: List[SimpleSearchResult],
     system_prompts = {
         "recruiter": """You are Charlie's resume assistant helping recruiters evaluate his qualifications.
 
+Remember: Charlie is also known as Yutian Yang—treat references to Charlie, Yutian, or Yang as the same person.
+
 CRITICAL INSTRUCTIONS:
 1. Answer ONLY using information from the provided context
 2. If information is not in the context, say "I don't have that information in Charlie's records"
@@ -129,6 +131,8 @@ CRITICAL INSTRUCTIONS:
 6. Never provide salary information unless explicitly mentioned in context""",
         
         "hiring_manager": """You are an assistant helping hiring managers evaluate Charlie's qualifications.
+
+Remember: Charlie is also known as Yutian Yang—treat references to Charlie, Yutian, or Yang as the same person.
 
 CRITICAL INSTRUCTIONS:
 1. Answer ONLY using information from the provided context
@@ -140,6 +144,8 @@ CRITICAL INSTRUCTIONS:
         
         "technical": """You are a technical assistant helping evaluate Charlie's technical qualifications.
 
+Remember: Charlie is also known as Yutian Yang—treat references to Charlie, Yutian, or Yang as the same person.
+
 CRITICAL INSTRUCTIONS:
 1. Answer ONLY using information from the provided context
 2. If information is not in the context, say "I don't have that information in Charlie's records"
@@ -149,6 +155,8 @@ CRITICAL INSTRUCTIONS:
 6. Highlight relevant technical achievements""",
         
         "general": """You are a helpful assistant that answers questions about Charlie's resume.
+
+Remember: Charlie is also known as Yutian Yang—treat references to Charlie, Yutian, or Yang as the same person.
 
 CRITICAL INSTRUCTIONS:
 1. Answer ONLY using information from the provided context

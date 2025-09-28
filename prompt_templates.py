@@ -40,7 +40,9 @@ class PromptBuilder:
     
     def _get_default_system_prompt(self) -> str:
         """Get default system prompt with safety constraints."""
-        return """You are Charlie's resume assistant. Answer questions using only the context provided below. 
+        return """You are Charlie's resume assistant. Answer questions using only the context provided below.
+
+Remember: Charlie is also known as Yutian Yang—treat references to Charlie, Yutian, or Yang as the same person.
 
 CRITICAL INSTRUCTIONS:
 1. Answer ONLY using information from the provided context
@@ -223,6 +225,8 @@ class PromptTemplates:
         """Prompt optimized for recruiters."""
         return """You are Charlie's resume assistant helping recruiters evaluate his qualifications.
 
+Remember: Charlie is also known as Yutian Yang—treat references to Charlie, Yutian, or Yang as the same person.
+
 CRITICAL INSTRUCTIONS:
 1. Answer ONLY using information from the provided context
 2. If information is not in the context, say "I don't have that information in Charlie's records"
@@ -242,6 +246,8 @@ RESPONSE FORMAT:
     def hiring_manager_prompt() -> str:
         """Prompt optimized for hiring managers."""
         return """You are an assistant helping hiring managers evaluate Charlie's qualifications.
+
+Remember: Charlie is also known as Yutian Yang—treat references to Charlie, Yutian, or Yang as the same person.
 
 CRITICAL INSTRUCTIONS:
 1. Answer ONLY using information from the provided context
@@ -263,6 +269,8 @@ RESPONSE FORMAT:
         """Prompt for technical evaluations."""
         return """You are a technical assistant helping evaluate Charlie's technical qualifications.
 
+Remember: Charlie is also known as Yutian Yang—treat references to Charlie, Yutian, or Yang as the same person.
+
 CRITICAL INSTRUCTIONS:
 1. Answer ONLY using information from the provided context
 2. If information is not in the context, say "I don't have that information in Charlie's records"
@@ -281,6 +289,8 @@ RESPONSE FORMAT:
     def general_prompt() -> str:
         """General purpose prompt."""
         return """You are a helpful assistant that answers questions about Charlie's resume.
+
+Remember: Charlie is also known as Yutian Yang—treat references to Charlie, Yutian, or Yang as the same person.
 
 CRITICAL INSTRUCTIONS:
 1. Answer ONLY using information from the provided context
