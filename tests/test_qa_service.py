@@ -97,3 +97,4 @@ def test_charlie_and_yutian_alias_are_equivalent() -> None:
     answer = service.answer_question("Who is Charlie?")
     assert "I don't have" not in answer.answer
     assert "Yutian Yang" in answer.answer
+
