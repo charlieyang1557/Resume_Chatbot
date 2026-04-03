@@ -23,33 +23,54 @@ def _iter_text_files(directory: Path) -> Iterable[Path]:
             yield path
 
 
-def _split_markdown_sections(text: str) -> Sequence[tuple[str, str]]:
-    """Split a Markdown document into ``(title, body)`` sections."""
+def _split_markdown_sections(text: str) -> Sequence[tuple[str, str, str]]:
+    """Split a Markdown document into sections by ``##`` headers.
 
-    sections: list[tuple[str, list[str]]] = []
+    Returns a list of ``(parent_title, section_title, body)`` tuples.
+    The top-level ``#`` header is captured as ``parent_title`` and carried
+    through to every section beneath it.  Bullet points (``-`` / ``*``)
+    stay attached to their nearest ``##`` header.
+    """
+
+    sections: list[tuple[str, str, list[str]]] = []
+    parent_title = "Overview"
     current_title = "Overview"
     current_lines: list[str] = []
 
     for raw_line in text.splitlines():
         line = raw_line.rstrip()
-        if line.startswith("#"):
+
+        # Top-level header — sets parent_title but does NOT start a new chunk
+        if line.startswith("# ") and not line.startswith("## "):
+            parent_title = line.lstrip("# ").strip() or parent_title
+            continue
+
+        # Second-level header — flush current chunk, start a new one
+        if line.startswith("## "):
             if current_lines:
-                sections.append((current_title, current_lines))
+                sections.append((parent_title, current_title, current_lines))
                 current_lines = []
             current_title = line.lstrip("# ").strip() or current_title
-        else:
-            current_lines.append(line)
-    if current_lines:
-        sections.append((current_title, current_lines))
+            continue
 
-    normalised_sections: list[tuple[str, str]] = []
-    for title, lines in sections:
-        body = "\n".join(line for line in lines).strip()
+        # Everything else (bullets, text, blank lines) stays with current section
+        current_lines.append(line)
+
+    # Flush last section
+    if current_lines:
+        sections.append((parent_title, current_title, current_lines))
+
+    normalised: list[tuple[str, str, str]] = []
+    for p_title, s_title, lines in sections:
+        body = "\n".join(lines).strip()
         if body:
-            normalised_sections.append((title, body))
-    if not normalised_sections and text.strip():
-        normalised_sections.append(("Overview", text.strip()))
-    return normalised_sections
+            normalised.append((p_title, s_title, body))
+
+    # If no ## headers were found, treat the whole document as one chunk
+    if not normalised and text.strip():
+        normalised.append((parent_title, "Overview", text.strip()))
+
+    return normalised
 
 
 def load_resume_documents(directory: Path) -> List[Document]:
@@ -73,14 +94,17 @@ def load_resume_documents(directory: Path) -> List[Document]:
     documents: list[Document] = []
     for path in _iter_text_files(directory):
         text = path.read_text(encoding="utf-8")
-        for idx, (title, body) in enumerate(_split_markdown_sections(text), start=1):
+        for idx, (parent_title, title, body) in enumerate(
+            _split_markdown_sections(text), start=1
+        ):
             documents.append(
                 Document(
                     content=body,
                     metadata={
                         "source": str(path.relative_to(directory)),
                         "title": title,
-                        "chunk": idx,
+                        "parent_title": parent_title,
+                        "chunk_index": idx,
                     },
                 )
             )

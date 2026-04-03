@@ -4,27 +4,33 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "resume-chatbot"
-version = "0.1.0"
-description = "A retrieval-augmented generation (RAG) chatbot for answering questions about a resume."
+version = "2.0.0"
+description = "A portfolio-ready RAG chatbot with hybrid retrieval (BM25 + FAISS) and Claude LLM."
 readme = "README.md"
-authors = [{name = "Your Name", email = "you@example.com"}]
+authors = [{name = "Charlie Yang", email = "charlieyang990314@gmail.com"}]
 requires-python = ">=3.10"
 dependencies = [
-    "typer>=0.9",
-    "rich>=13",
-    "python-dotenv>=1.0",
-    "openai>=1.14",
     "fastapi>=0.110",
     "uvicorn>=0.29",
+    "python-dotenv>=1.0",
+    "anthropic>=0.40",
+    "rank-bm25>=0.2",
+    "fastembed>=0.2",
+    "faiss-cpu>=1.7",
+    "numpy>=1.24",
+    "rich>=13",
+    "typer>=0.9",
+    "pydantic>=2.0",
 ]
 
 [project.optional-dependencies]
 dev = [
     "pytest>=7.4",
+    "httpx>=0.25",
 ]
 
 [project.urls]
-Homepage = "https://example.com"
+Homepage = "https://github.com/charlieyang1557/Resume_Chatbot"
 
 [tool.setuptools.packages.find]
 where = ["."]

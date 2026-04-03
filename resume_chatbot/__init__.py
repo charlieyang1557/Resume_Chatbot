@@ -17,12 +17,17 @@ __all__ = [
     "RetrievedDocument",
     "BaseLLM",
     "SimpleLLM",
+    "ClaudeLLM",
     "OpenAIChatLLM",
     "create_llm",
+    "BM25Retriever",
+    "DenseRetriever",
+    "HybridRetriever",
+    "QueryRewriter",
 ]
 
 
-def __getattr__(name: str) -> Any:  # pragma: no cover - simple delegation helper
+def __getattr__(name: str) -> Any:  # pragma: no cover
     if name in {"DEFAULT_SYSTEM_PROMPT", "ResumeChatbot", "ChatResult"}:
         module = import_module(".chatbot", __name__)
     elif name in {"Document", "load_resume_documents"}:
@@ -33,8 +38,12 @@ def __getattr__(name: str) -> Any:  # pragma: no cover - simple delegation helpe
         module = import_module(".knowledge_graph", __name__)
     elif name in {"ResumeRetriever", "RetrievedDocument"}:
         module = import_module(".retriever", __name__)
-    elif name in {"BaseLLM", "SimpleLLM", "OpenAIChatLLM", "create_llm"}:
+    elif name in {"BaseLLM", "SimpleLLM", "ClaudeLLM", "OpenAIChatLLM", "create_llm"}:
         module = import_module(".llm", __name__)
+    elif name in {"BM25Retriever", "DenseRetriever", "HybridRetriever"}:
+        module = import_module(".hybrid_retriever", __name__)
+    elif name == "QueryRewriter":
+        module = import_module(".query_rewriter", __name__)
     else:
         raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
 

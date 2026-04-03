@@ -153,6 +153,93 @@ class OpenAIChatLLM(BaseLLM):
         return (choice.message.content or "").strip()
 
 
+class ClaudeLLM(BaseLLM):
+    """Wrapper around the Anthropic Messages API with optional streaming."""
+
+    def __init__(
+        self,
+        *,
+        api_key: str | None = None,
+        model: str | None = None,
+        temperature: float = 0.1,
+        max_tokens: int = 1024,
+    ) -> None:
+        try:
+            from anthropic import Anthropic  # type: ignore
+        except ImportError as exc:  # pragma: no cover
+            raise ImportError(
+                "The 'anthropic' package is required for ClaudeLLM. "
+                "Install with: pip install anthropic"
+            ) from exc
+
+        self._client = Anthropic(api_key=api_key or os.getenv("ANTHROPIC_API_KEY"))
+        self._model = model or os.getenv("CLAUDE_MODEL", "claude-sonnet-4-20250514")
+        self._temperature = temperature
+        self._max_tokens = max_tokens
+
+    def _build_messages(
+        self,
+        question: str,
+        context: str,
+        *,
+        chat_history: Optional[ChatHistory] = None,
+    ) -> List[dict[str, str]]:
+        messages: list[dict[str, str]] = []
+        if chat_history:
+            for user_turn, assistant_turn in chat_history:
+                messages.append({"role": "user", "content": user_turn})
+                messages.append({"role": "assistant", "content": assistant_turn})
+        user_prompt = (
+            "Resume context:\n"
+            f"{context}\n\n"
+            f"Question: {question}"
+        )
+        messages.append({"role": "user", "content": user_prompt})
+        return messages
+
+    def generate(
+        self,
+        question: str,
+        context: str,
+        *,
+        system_prompt: Optional[str] = None,
+        chat_history: Optional[ChatHistory] = None,
+    ) -> str:
+        messages = self._build_messages(
+            question, context, chat_history=chat_history
+        )
+        response = self._client.messages.create(
+            model=self._model,
+            max_tokens=self._max_tokens,
+            temperature=self._temperature,
+            system=system_prompt or "",
+            messages=messages,  # type: ignore[arg-type]
+        )
+        return response.content[0].text.strip()
+
+    def stream(
+        self,
+        question: str,
+        context: str,
+        *,
+        system_prompt: Optional[str] = None,
+        chat_history: Optional[ChatHistory] = None,
+    ):
+        """Yield string tokens as they arrive from the Anthropic API."""
+        messages = self._build_messages(
+            question, context, chat_history=chat_history
+        )
+        with self._client.messages.stream(
+            model=self._model,
+            max_tokens=self._max_tokens,
+            temperature=self._temperature,
+            system=system_prompt or "",
+            messages=messages,  # type: ignore[arg-type]
+        ) as stream:
+            for text in stream.text_stream:
+                yield text
+
+
 class OllamaLLM(BaseLLM):
     """Wrapper around the Ollama API for local LLM inference."""
 
@@ -255,8 +342,12 @@ def create_llm(backend: str) -> BaseLLM:
     backend = backend.lower().strip()
     if backend == "simple":
         return SimpleLLM()
+    if backend == "claude":
+        return ClaudeLLM()
     if backend == "openai":
         return OpenAIChatLLM()
     if backend == "ollama":
         return OllamaLLM()
-    raise ValueError("Unsupported LLM backend. Choose 'simple', 'openai', or 'ollama'.")
+    raise ValueError(
+        "Unsupported LLM backend. Choose 'simple', 'claude', 'openai', or 'ollama'."
+    )
