@@ -10,9 +10,18 @@ interface ChatBubbleProps {
 
 export function ChatBubble({ message }: ChatBubbleProps) {
   const isUser = message.role === "user";
+  const isStreaming = !isUser && message.isStreaming && message.content;
+
+  const className = [
+    "bubble",
+    isUser ? "bubble-user" : "bubble-assistant",
+    isStreaming ? "bubble-streaming" : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
 
   return (
-    <div className={`bubble ${isUser ? "bubble-user" : "bubble-assistant"}`}>
+    <div className={className}>
       <div className="bubble-label">{isUser ? "You" : "Assistant"}</div>
       <div className="bubble-content">
         {isUser ? (

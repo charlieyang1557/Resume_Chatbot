@@ -16,15 +16,19 @@ export function SourceCard({ sources }: SourceCardProps) {
         className="source-toggle"
         onClick={() => setIsExpanded(!isExpanded)}
       >
-        <span className="source-toggle-icon">{isExpanded ? "\u25BC" : "\u25B6"}</span>
-        Sources ({sources.length})
+        <span className={`source-toggle-icon ${isExpanded ? "expanded" : ""}`}>
+          {"\u25B6"}
+        </span>
+        {sources.length} {sources.length === 1 ? "source" : "sources"} retrieved
       </button>
       {isExpanded && (
         <div className="source-list">
           {sources.map((s, i) => (
             <div key={i} className="source-item">
               <div className="source-header">
-                <span className="source-title">{s.title ?? s.source}</span>
+                <span className="source-title">
+                  {s.title ?? s.source}
+                </span>
                 <span className="source-score">
                   {(s.score * 100).toFixed(1)}%
                 </span>
