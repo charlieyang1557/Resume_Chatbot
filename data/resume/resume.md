@@ -63,10 +63,15 @@ Data Analysis & Modeling with Professor Anujit Chakraborty.
 - Addressed multicollinearity among predictors and improved prediction accuracy of procrastination behavior variables with regularization using Lasso Regression.
 - Facilitated industry application by uncovering procrastination patterns, offering insights for tech companies to develop user-centric products and services, potentially enhancing user satisfaction, retention, and success.
 
-## Projects
+## Projects — Resume RAG Chatbot
 
-**Classification of Mushrooms: Edible or Poisonous** — UC Davis STA 221, Advanced Statistical Computing (Python)
+[Live Demo](https://resume-chatbot-production.up.railway.app/) | Python, React, FastAPI, FAISS, Anthropic Claude API
 
-- Collaborated on a team project developing machine learning and deep learning models, including Random Forest, Kernel SVM, and Convolutional Neural Networks (CNN) to classify mushroom images into edible or poisonous.
-- Applied advanced techniques such as grid search for hyperparameter tuning and transfer learning using pre-trained ResNet50 model to improve the efficiency and accuracy of the classification models.
-- Critically evaluated model performance, suggesting potential enhancements by exploring alternative pre-trained models or architectural adjustments.
+- Built a RAG chatbot with hybrid retrieval (BM25 + FAISS), Claude LLM streaming, and query rewriting. Alpha sweep via LLM-as-judge found pure semantic retrieval achieved 5.0/5.0 relevance.
+- Deployed full-stack app (React + FastAPI) with source attribution, dark/light mode, rate limiting, and Docker containerized one-command startup.
+
+## Projects — Classification of Mushrooms
+
+UC Davis - STA 221 Advanced Statistical Computing (Python)
+
+- Developed Random Forest, Kernel SVM, and CNN models with grid search hyperparameter tuning and transfer learning using pre-trained ResNet50 to classify mushroom images as edible or poisonous.
