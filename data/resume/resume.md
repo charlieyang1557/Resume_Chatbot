@@ -70,6 +70,19 @@ Data Analysis & Modeling with Professor Anujit Chakraborty.
 - Built a RAG chatbot with hybrid retrieval (BM25 + FAISS), Claude LLM streaming, and query rewriting. Alpha sweep via LLM-as-judge found pure semantic retrieval achieved 5.0/5.0 relevance.
 - Deployed full-stack app (React + FastAPI) with source attribution, dark/light mode, rate limiting, and Docker containerized one-command startup.
 
+## Projects — BoardGameOracle: RAG-Based Board Game Rules Q&A System
+
+[Live Demo](https://boardgame-rules-rag-production.up.railway.app/) | [GitHub](https://github.com/charlieyang1557/boardgame-rules-RAG) | Python, FastAPI, React, TypeScript, Tailwind CSS, Pinecone, Claude Sonnet/Haiku, OpenAI Embeddings, LlamaParse, sentence-transformers, rank-bm25, Docker
+
+- Built a retrieval-augmented generation system that answers board game rules questions with citations from official rulebooks. Supports 4 games spanning simple to heavy complexity: Splendor, Catan, Speakeasy (Vital Lacerda), and Food Chain Magnate (Splotter).
+- Hybrid retrieval: Pinecone dense vectors + client-side BM25 with Reciprocal Rank Fusion, cross-encoder reranking (ms-marco-MiniLM).
+- 3-tier answer system: Tier 1 direct citation, Tier 2 chain-of-retrieval multi-hop (up to 3 hops), Tier 3 honest uncertainty with suggested interpretations.
+- Two-step citation verification: string overlap + LLM entailment check. Zero hallucinations on 186-entry golden dataset across all 4 games.
+- Config-driven chunking architecture: adding a new complex game is a config change (section patterns + chunking rules), not a code change.
+- Query rewriting with game-specific terminology maps bridging colloquial player language to rulebook terms.
+- React frontend with expandable source cards, tier badges, feedback collection. Deployed as single-service FastAPI + static files on Railway.
+- Key results: Splendor 100% Tier 1 accuracy, Catan 93% Tier 1 accuracy, FCM Tier 2 multi-hop 90% accuracy (target was 65%), canary query ($125 income calculation requiring 3 rule sections + arithmetic) passes perfectly in all runs.
+
 ## Projects — Classification of Mushrooms
 
 UC Davis - STA 221 Advanced Statistical Computing (Python)

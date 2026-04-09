@@ -27,6 +27,15 @@
     {"id": "tech-dbt", "label": "dbt", "type": "Technology"},
     {"id": "tech-python", "label": "Python", "type": "Technology"},
     {"id": "tech-random-forest", "label": "Random Forest", "type": "Technology"},
+    {"id": "project-boardgame-oracle", "label": "BoardGameOracle: RAG-Based Board Game Rules Q&A System", "type": "Project"},
+    {"id": "tech-pinecone-db", "label": "Pinecone Vector Database", "type": "Technology"},
+    {"id": "tech-fastapi", "label": "FastAPI", "type": "Technology"},
+    {"id": "tech-react", "label": "React", "type": "Technology"},
+    {"id": "tech-openai-embeddings", "label": "OpenAI Embeddings", "type": "Technology"},
+    {"id": "tech-llamaparse", "label": "LlamaParse", "type": "Technology"},
+    {"id": "tech-sentence-transformers", "label": "sentence-transformers", "type": "Technology"},
+    {"id": "tech-bm25", "label": "BM25", "type": "Technology"},
+    {"id": "tech-docker", "label": "Docker", "type": "Technology"},
     {"id": "community-wiml", "label": "Women in Machine Learning Mentorship Program", "type": "Community"},
     {"id": "community-seattle-ai", "label": "Seattle Applied AI Meetup", "type": "Community"}
   ],
@@ -134,6 +143,29 @@
     {"source": "pinecone", "target": "tech-bigquery", "relation": "used_technology", "description": "Modeled data in BigQuery."},
     {"source": "pinecone", "target": "tech-dbt", "relation": "used_technology", "description": "Implemented dbt transformations for analytics."},
     {"source": "pinecone", "target": "tech-python", "relation": "used_technology", "description": "Ran churn modelling workflows in Python."},
-    {"source": "pinecone", "target": "tech-random-forest", "relation": "used_technology", "description": "Built Random Forest models for churn detection."}
+    {"source": "pinecone", "target": "tech-random-forest", "relation": "used_technology", "description": "Built Random Forest models for churn detection."},
+    {
+      "source": "yutian-yang",
+      "target": "project-boardgame-oracle",
+      "relation": "built_project",
+      "description": "Built a RAG system that answers board game rules questions with citations from official rulebooks. Supports Splendor, Catan, Speakeasy, and Food Chain Magnate.",
+      "highlights": [
+        "Hybrid retrieval: Pinecone dense vectors + BM25 with Reciprocal Rank Fusion and cross-encoder reranking",
+        "3-tier answer system with chain-of-retrieval multi-hop reasoning",
+        "Zero hallucinations on 186-entry golden dataset across all 4 games",
+        "Config-driven chunking: adding a new game is a config change, not a code change",
+        "Splendor 100% Tier 1 accuracy, Catan 93%, FCM multi-hop 90%"
+      ]
+    },
+    {"source": "project-boardgame-oracle", "target": "tech-pinecone-db", "relation": "used_technology", "description": "Pinecone for dense vector retrieval."},
+    {"source": "project-boardgame-oracle", "target": "tech-fastapi", "relation": "used_technology", "description": "FastAPI backend serving the RAG pipeline."},
+    {"source": "project-boardgame-oracle", "target": "tech-react", "relation": "used_technology", "description": "React frontend with expandable source cards and tier badges."},
+    {"source": "project-boardgame-oracle", "target": "tech-claude", "relation": "used_technology", "description": "Claude Sonnet/Haiku for answer generation and entailment verification."},
+    {"source": "project-boardgame-oracle", "target": "tech-openai-embeddings", "relation": "used_technology", "description": "OpenAI embeddings for document vectorization."},
+    {"source": "project-boardgame-oracle", "target": "tech-llamaparse", "relation": "used_technology", "description": "LlamaParse for rulebook PDF parsing."},
+    {"source": "project-boardgame-oracle", "target": "tech-sentence-transformers", "relation": "used_technology", "description": "Cross-encoder reranking with ms-marco-MiniLM."},
+    {"source": "project-boardgame-oracle", "target": "tech-bm25", "relation": "used_technology", "description": "BM25 sparse retrieval fused with dense vectors."},
+    {"source": "project-boardgame-oracle", "target": "tech-docker", "relation": "used_technology", "description": "Docker containerized deployment on Railway."},
+    {"source": "project-boardgame-oracle", "target": "tech-python", "relation": "used_technology", "description": "Python backend implementation."}
   ]
 }
