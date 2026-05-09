@@ -1,43 +1,119 @@
-# Current Projects
+# Current and GitHub Projects
+
+## Public GitHub Profile
+
+Yutian's public GitHub profile is https://github.com/charlieyang1557. Public repositories include portfolio, RAG systems, quantitative finance research, browser automation, and university coursework projects.
+
+## BTC Alpha Pipeline
+
+[GitHub](https://github.com/charlieyang1557/btc-alpha-pipeline) | Python, pandas, NumPy, PyArrow, Backtrader, SQLite, CCXT, Pydantic, pytest, Anthropic SDK
+
+A quantitative research pipeline for discovering, testing, and validating BTC trading strategies. It is an active pre-MVP research system focused on auditable data, backtesting, evaluation, and research-discipline infrastructure rather than rushing to live trading.
+
+- Built and validated BTC/USDT hourly OHLCV ingestion from Binance Vision and CCXT with Parquet market data storage, schema checks, and quality checks.
+- Implemented Backtrader-based single-run and walk-forward backtesting, experiment registry tracking, baseline strategies, and manual trade-audit workflows.
+- Added factor library, strategy DSL, hypothesis hashing, and AI-assisted hypothesis generation scaffolding.
+- Current evaluation focus: regime-aware holdout evaluation, multiple-testing controls, Sharpe deflation screens, and clearer evidence gates to separate signal from overfit artifacts.
+- Research conventions include UTC timestamps, bar N signal computation with bar N+1 execution, explicit cost modeling, reproducible hashes, and train/validation/holdout/test boundaries.
+- Not positioned as production live trading, capital allocation automation, public performance claims, or a polished demo UI.
 
 ## Polymarket Automated Trading System
 
-A fully automated market-making and trading system for CFTC-regulated prediction markets, originally built for Kalshi and ported to Polymarket US sports markets.
+[GitHub](https://github.com/charlieyang1557/polymarket-arb) | Python, Polymarket US API, Kalshi API, SQLite, pytest
 
-- Built a complete market-making engine in Python with OBI (Orderbook Imbalance) microprice estimation, continuous inventory skew (gamma=0.5c/contract), and dynamic spread adjustment based on volatility.
-- Designed a 4-layer risk management system: Layer 1 fat-finger checks, Layer 2 inventory limits, Layer 3 session-level P&L stops (daily loss limit $20, max drawdown 10%), Layer 4 system-level circuit breakers.
-- Implemented a platform-agnostic adapter pattern — normalized Polymarket's SDK responses to match the engine's internal format, allowing the same OBI/skew/risk logic to work across Kalshi and Polymarket without engine changes.
-- Conducted a rigorous calibration study on Kalshi sports markets analyzing 10,000+ resolved markets, confirming zero tradeable mispricing — demonstrating quantitative validation discipline before committing capital.
-- Built a diagnostic scanner framework using Gamma API and CLOB client that identified 47 viable Polymarket markets with average net spread of 3.6 cents and maker rebates.
-- Explored three strategy tracks: (1) Multi-option rebalancing market making, (2) Systematic "No" bias using statistical analysis of historical resolution data (found 81.4% win rate in YES 0.60-0.70 range, p=0.008), (3) Leader-follower settlement-triggered cross-market arbitrage.
-- Paper trading results on Kalshi: +151.9 cents realized P&L across 71+ fills in 11 sessions, with best single session +49.7 cents.
-- Atomic file operations (tmp+os.rename with .processing pattern) for race-condition-free scanner-to-engine handoff.
-- Infrastructure: PM2 process management, Discord webhook alerts, SQLite session logging, Ed25519 keypair authentication, daily crontab-triggered scanning with NVM environment loading.
-- Tech: Python, polymarket-us SDK, Gamma API, CLOB API, FAISS, PM2, Discord API, SQLite.
+An automated trading system for Polymarket US and Kalshi prediction markets. It was built, deployed live, and systematically tested across four strategies from March 10 to April 7, 2026, with a strong emphasis on empirical falsification and risk controls.
+
+- Tested pre-game passive market making, Pinnacle de-vig odds calibration, cross-market correlation, and WebSocket event trading.
+- Found that Polymarket US sports markets were priced within about +/-0.8% of Pinnacle, leaving no systematic mispricing in the tested setup.
+- Identified adverse selection as the main issue in passive market making, with a roughly 26% round-trip fill rate before targeted mitigations.
+- Implemented live market-making components, paper trading, market scanning, cross-market logging, calibration analysis, and shared market-making engine modules.
+- Designed a 4-layer risk system: per-order checks, inventory controls, session P&L stops, and system-level market lifecycle protections.
+- Project report documents 36 live maker fills across 5 sessions, about 140 commits, and 639 unit tests across 36+ test files.
 
 ## Tock Restaurant Reservation Bot
 
-An automated reservation sniper bot that monitors high-demand restaurant availability on Tock and books tables the moment slots are released.
+[GitHub](https://github.com/charlieyang1557/tock-reservation-bot) | Python, Playwright, asyncio, Discord webhooks
 
-- Built with Python and Playwright for headless browser automation, handling the full booking flow: login, calendar navigation, slot detection, and checkout with saved payment.
-- Implemented a multi-mode architecture: hourly polling for general availability scanning, plus a precision sniper mode that polls every 3 seconds during known release windows (e.g., Friday 8:00 PM PDT for Fuhuihua restaurant).
-- Built robust slot detection with 6-selector fallback strategy to handle Tock's varying UI patterns across different restaurants (verified working on both Benu and Fuhuihua).
-- Concurrent booking attempts across multiple target dates, stopping after first successful reservation.
-- Session cookie persistence for fast re-authentication, avoiding repeated login flows.
-- Discord webhook notifications for slot detection alerts and booking confirmations.
-- Deployed on Mac Mini via PM2 with automatic restart on failure, running 24/7 in headless mode.
-- Release window detection to identify when restaurants publish new availability.
-- Tech: Python, Playwright, asyncio, PM2, Discord webhooks.
+An automated reservation sniper for restaurants on Tock that monitors for available slots, enters high-speed polling around release windows, books the first available slot, and sends Discord notifications.
+
+- Built sniper mode with roughly 3-second polling during configurable release windows.
+- Implemented release auto-detection by scraping restaurant release announcements and updating the sniper schedule.
+- Added session pre-warming, cookie persistence, adaptive concurrency, concurrent booking races, dry-run mode, selector verification, and slot release tracking.
+- Designed rich Discord notifications for confirmations, slot detections, sniper activations, booking failures, and dry-run would-have-booked events.
+- Built a maintainable project structure around config, selectors, browser/login handling, availability checking, checkout booking, monitoring, notification, release detection, and tracker modules.
 
 ## OpenClaw Home Server Infrastructure
 
-A self-hosted Mac Mini configured as an always-on production server running multiple automated systems 24/7 with full monitoring and self-recovery capabilities.
+A self-hosted Mac Mini configured as an always-on production server running multiple automated systems with monitoring and self-recovery.
 
-- Mac Mini (username: openclaw) configured with triple-layer sleep prevention: pmset system policy (sleep=0, disksleep=0), launchd caffeinate service with KeepAlive, and per-process caffeinate wrappers.
-- Runs a Discord monitoring bot ("Lobster") powered by GPT-5.4 via ChatGPT Plus OAuth through the OpenClaw gateway, enabling natural language server health queries and status checks.
-- PM2 for process management with pm2 startup + pm2 save for automatic service recovery across reboots.
-- Crontab scheduling with proper NVM environment sourcing for Node.js-dependent tasks.
-- Auto-restart on power failure (pmset autorestart=1), Wake on LAN (womp=1) for remote recovery.
-- Currently manages: Tock reservation bot, Polymarket trading system, and OpenClaw Discord gateway.
-- Full deployment verified through reboot testing — all services auto-recover without manual intervention.
-- Tech: macOS, PM2, launchd, crontab, OpenClaw, Discord API, ChatGPT Plus OAuth, SSH remote management.
+- Configured triple-layer sleep prevention with pmset, launchd caffeinate, and per-process caffeinate wrappers.
+- Runs a Discord monitoring bot powered by GPT-5.4 through the OpenClaw gateway, enabling natural language server health queries and status checks.
+- Uses PM2 startup, PM2 save, crontab scheduling with NVM environment sourcing, auto-restart on power failure, Wake on LAN, and SSH remote management.
+- Currently manages the Tock reservation bot, Polymarket trading system, and OpenClaw Discord gateway.
+- Full deployment verified through reboot testing so services recover without manual intervention.
+- Tech: macOS, PM2, launchd, crontab, OpenClaw, Discord API, ChatGPT Plus OAuth, SSH.
+
+## BoardGameOracle
+
+[Live Demo](https://boardgame-rules-rag-production.up.railway.app/) | [GitHub](https://github.com/charlieyang1557/boardgame-rules-RAG) | Python, FastAPI, React, TypeScript, Tailwind CSS, Pinecone, Claude Sonnet/Haiku, OpenAI Embeddings, LlamaParse, sentence-transformers, rank-bm25, Docker
+
+- Built a RAG-based Q&A system that answers board game rules questions with citations, multi-hop reasoning, and honest uncertainty handling.
+- Supports Splendor, Catan, Speakeasy, and Food Chain Magnate.
+- Uses query rewriting, Pinecone dense retrieval, BM25 sparse retrieval, Reciprocal Rank Fusion, local cross-encoder reranking, tier routing, and citation verification.
+- Evaluation results from the public README: Splendor 91% accuracy, Catan 91%, Speakeasy 82%, Food Chain Magnate 79%, and Food Chain Magnate Tier 2 multi-hop 90%.
+- Deployed as a single-service Docker container on Railway with FastAPI serving the React build.
+
+## Resume RAG Chatbot
+
+[Live Demo](https://resume-chatbot-production.up.railway.app/) | [GitHub](https://github.com/charlieyang1557/Resume_Chatbot) | Python, React, FastAPI, FAISS, Anthropic Claude API
+
+- Built a RAG chatbot with BM25 and FAISS hybrid retrieval, query rewriting, Claude streaming responses, and source attribution.
+- Uses Reciprocal Rank Fusion with an alpha parameter to control sparse versus dense weighting.
+- Frontend includes markdown rendering, collapsible source cards, dark/light theme, and typing indicators.
+- Deployed as a full-stack app with Docker and Railway.
+
+## University Projects on GitHub
+
+### STA 221 Mushroom Classification
+
+[GitHub](https://github.com/charlieyang1557/STA-221-Mushroom-Classification) | Jupyter Notebook, Python, machine learning, CNN, transfer learning
+
+- Classified mushroom images as edible or poisonous using a Kaggle dataset with over 3,000 images.
+- Compared Random Forest, Kernel SVM, CNN, and ResNet50 transfer learning under limited-image constraints.
+- Random Forest reached 0.648 test accuracy after hyperparameter optimization; Kernel SVM reached 0.656 test accuracy.
+- The project concluded Random Forest was the most promising overall by accuracy, precision, recall, F1, and discriminatory power, while transfer learning needed further improvement.
+
+### STA 160 Wheat Classification
+
+[GitHub](https://github.com/charlieyang1557/STA-160-Wheat-Classification) | Statistical learning, Random Forest, LOOCV, multinomial logistic regression
+
+- Analyzed UCI seed data for three wheat varieties: Kama, Rosa, and Canadian.
+- Used visualization, correlation analysis, Leave-One-Out Cross Validation, grid search with Random Forest, and multiclass classification.
+- Random Forest grid search reported 0.952381 training accuracy under the selected configuration.
+- Compared multinomial logistic classification against One-vs-Rest approaches using area and perimeter as predictors.
+
+### ECN 190 Information Cascades
+
+[GitHub](https://github.com/charlieyang1557/ECN-190-Information-Cascades) | Behavioral economics, experiment design, information cascades
+
+- Investigated information cascades through an urn-prediction experiment where participants had private signals and could observe prior public predictions.
+- Designed the study to test whether matching early predictions cause later participants to ignore private information and follow the observed pattern.
+- Reported 25 experimental rounds with 11 cascades forming, or 44% of rounds.
+- Proposed an extension studying loss aversion by increasing penalties for incorrect guesses.
+
+### STA 141B Covid Dashboard
+
+[GitHub](https://github.com/charlieyang1557/STA-141B-Covid-Dashboard) | R, dashboarding, Covid-19 data visualization
+
+- Built a Covid-19 status tracker for country-level confirmed cases, deaths, and recoveries over selected time periods.
+- Included country comparison, global Covid-19 summary, status plots, and tables for selected countries.
+- The README notes the original covid19api.com data source is no longer working.
+
+### STA 237A Covid and Vaccination Policy
+
+[GitHub](https://github.com/charlieyang1557/STA-237-Covid-and-vaccination-policy) | Time series, ARIMA, ARIMAX, policy analysis
+
+- Assessed the effect of vaccination policy on Covid spread and whether policy effectiveness varied across countries.
+- Modeled vaccination policy as dummies with increasing stringency and Covid growth rate as new cases per million.
+- Controlled for testing rate, compared ARIMA and ARIMAX models, and used gain in variance explained as a proxy for policy effectiveness.
+- Planned ANOVA comparisons across countries and internal/external validation using historical subsets and held-out realized data.

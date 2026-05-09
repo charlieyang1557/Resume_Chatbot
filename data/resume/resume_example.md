@@ -50,7 +50,3 @@ Yutian Yang (he/him/his) is a data scientist and analytics engineer with experie
 - Collaborated on machine learning and deep learning workflows—including Random Forest, Kernel SVM, and CNN architectures—to classify mushroom images.
 - Applied grid search for hyperparameter optimisation and transfer learning with a pre-trained ResNet50 model to improve inference accuracy.
 - Evaluated model performance and recommended future experiments exploring alternative pre-trained networks and architecture adjustments.
-
-## Volunteering & Community
-- Mentor, Women in Machine Learning (WiML) Mentorship Program.
-- Organizer, Seattle Applied AI Meetup (1,200+ members).

@@ -2,44 +2,146 @@
   "title": "Yutian Yang Resume Knowledge Graph",
   "nodes": [
     {"id": "yutian-yang", "label": "Yutian Yang", "type": "Person", "pronouns": "he/him/his", "gender": "male"},
-    {"id": "onshape-ptc", "label": "Onshape by PTC (R&D Strategy)", "type": "Organization"},
+    {"id": "github-profile", "label": "Yutian Yang GitHub Profile", "type": "Profile", "url": "https://github.com/charlieyang1557"},
+
+    {"id": "onshape-ptc", "label": "Onshape by PTC", "type": "Organization"},
     {"id": "pinecone", "label": "Pinecone", "type": "Organization"},
     {"id": "allschool", "label": "Allschool", "type": "Organization"},
     {"id": "ucd-economics", "label": "UC Davis Department of Economics", "type": "Organization"},
-    {"id": "ucd-ms", "label": "University of California, Davis — M.S. Statistics", "type": "Education"},
-    {"id": "ucd-bs", "label": "University of California, Davis — B.S. Statistics & Economics", "type": "Education"},
-    {"id": "project-mushroom", "label": "Classification of Mushrooms Project", "type": "Project"},
+
+    {"id": "uiuc-mcs", "label": "University of Illinois Urbana-Champaign - Master of Computer Science", "type": "Education"},
+    {"id": "ucd-ms-statistics", "label": "University of California, Davis - Master of Science in Statistics", "type": "Education"},
+    {"id": "ucd-bs-statistics-economics", "label": "University of California, Davis - Bachelor of Science in Statistics and Economics", "type": "Education"},
+
     {"id": "skill-programming", "label": "Programming Languages", "type": "Skill"},
     {"id": "skill-ml", "label": "Machine Learning", "type": "Skill"},
+    {"id": "skill-ai-llm", "label": "AI and LLM Systems", "type": "Skill"},
     {"id": "skill-data-engineering", "label": "Data Engineering", "type": "Skill"},
-    {"id": "skill-bi", "label": "Business Intelligence & Analytics", "type": "Skill"},
-    {"id": "tech-aws-bedrock", "label": "AWS Bedrock", "type": "Technology"},
-    {"id": "tech-claude", "label": "Claude 3.5 Sonnet", "type": "Technology"},
-    {"id": "tech-titan-embeddings", "label": "Titan Embeddings", "type": "Technology"},
+    {"id": "skill-bi", "label": "Business Intelligence and Analytics", "type": "Skill"},
+
+    {"id": "project-btc-alpha-pipeline", "label": "BTC Alpha Pipeline", "type": "Project", "url": "https://github.com/charlieyang1557/btc-alpha-pipeline"},
+    {"id": "project-polymarket-arb", "label": "Polymarket Automated Trading System", "type": "Project", "url": "https://github.com/charlieyang1557/polymarket-arb"},
+    {"id": "project-tock-reservation-bot", "label": "Tock Restaurant Reservation Bot", "type": "Project", "url": "https://github.com/charlieyang1557/tock-reservation-bot"},
+    {"id": "project-openclaw-server", "label": "OpenClaw Home Server Infrastructure", "type": "Project"},
+    {"id": "project-boardgame-oracle", "label": "BoardGameOracle: RAG-Based Board Game Rules Q&A System", "type": "Project", "url": "https://github.com/charlieyang1557/boardgame-rules-RAG"},
+    {"id": "project-resume-chatbot", "label": "Resume RAG Chatbot", "type": "Project", "url": "https://github.com/charlieyang1557/Resume_Chatbot"},
+    {"id": "project-mushroom", "label": "STA 221 Mushroom Classification", "type": "Project", "url": "https://github.com/charlieyang1557/STA-221-Mushroom-Classification"},
+    {"id": "project-wheat", "label": "STA 160 Wheat Classification", "type": "Project", "url": "https://github.com/charlieyang1557/STA-160-Wheat-Classification"},
+    {"id": "project-info-cascades", "label": "ECN 190 Information Cascades", "type": "Project", "url": "https://github.com/charlieyang1557/ECN-190-Information-Cascades"},
+    {"id": "project-covid-dashboard", "label": "STA 141B Covid Dashboard", "type": "Project", "url": "https://github.com/charlieyang1557/STA-141B-Covid-Dashboard"},
+    {"id": "project-vaccine-policy", "label": "STA 237A Covid and Vaccination Policy", "type": "Project", "url": "https://github.com/charlieyang1557/STA-237-Covid-and-vaccination-policy"},
+
+    {"id": "hobby-traveling", "label": "Traveling", "type": "Interest"},
+    {"id": "hobby-dining", "label": "Dining", "type": "Interest"},
+    {"id": "hobby-omakase", "label": "Omakase", "type": "Interest"},
+    {"id": "hobby-bars", "label": "Bars", "type": "Interest"},
+    {"id": "hobby-board-games", "label": "Board games", "type": "Interest"},
+    {"id": "hobby-poker", "label": "Poker", "type": "Interest"},
+    {"id": "hobby-badminton", "label": "Badminton", "type": "Interest"},
+    {"id": "uc-davis-badminton-team", "label": "UC Davis Badminton Team", "type": "Organization"},
+    {"id": "davis-open-2022", "label": "2022 Davis Open", "type": "Achievement"},
+    {"id": "davis-open-2023", "label": "2023 Davis Open", "type": "Achievement"},
+    {"id": "hobby-teamfight-tactics", "label": "Teamfight Tactics (TFT)", "type": "Interest"},
+    {"id": "tft-master-rank", "label": "Teamfight Tactics Master Rank", "type": "Achievement"},
+
+    {"id": "tech-sql", "label": "SQL", "type": "Technology"},
+    {"id": "tech-python", "label": "Python", "type": "Technology"},
+    {"id": "tech-r", "label": "R", "type": "Technology"},
+    {"id": "tech-scikit-learn", "label": "Scikit-learn", "type": "Technology"},
+    {"id": "tech-pytorch", "label": "PyTorch", "type": "Technology"},
+    {"id": "tech-random-forest", "label": "Random Forest", "type": "Technology"},
+    {"id": "tech-svm", "label": "Support Vector Machines", "type": "Technology"},
+    {"id": "tech-cnn", "label": "Convolutional Neural Networks", "type": "Technology"},
+    {"id": "tech-resnet50", "label": "ResNet50 Transfer Learning", "type": "Technology"},
     {"id": "tech-prophet", "label": "Prophet", "type": "Technology"},
+    {"id": "tech-statsmodels", "label": "Statsmodels", "type": "Technology"},
     {"id": "tech-isolation-forest", "label": "Isolation Forest", "type": "Technology"},
     {"id": "tech-merlion", "label": "Merlion", "type": "Technology"},
     {"id": "tech-lstm-ae", "label": "LSTM Autoencoder", "type": "Technology"},
-    {"id": "tech-looker", "label": "Looker", "type": "Technology"},
-    {"id": "tech-sql", "label": "SQL", "type": "Technology"},
-    {"id": "tech-sigma", "label": "Sigma", "type": "Technology"},
-    {"id": "tech-bigquery", "label": "BigQuery", "type": "Technology"},
-    {"id": "tech-dbt", "label": "dbt", "type": "Technology"},
-    {"id": "tech-python", "label": "Python", "type": "Technology"},
-    {"id": "tech-random-forest", "label": "Random Forest", "type": "Technology"},
-    {"id": "project-boardgame-oracle", "label": "BoardGameOracle: RAG-Based Board Game Rules Q&A System", "type": "Project"},
+    {"id": "tech-aws-bedrock", "label": "AWS Bedrock", "type": "Technology"},
+    {"id": "tech-claude", "label": "Anthropic Claude", "type": "Technology"},
+    {"id": "tech-titan-embeddings", "label": "Titan Embeddings", "type": "Technology"},
+    {"id": "tech-rag", "label": "Retrieval-Augmented Generation", "type": "Technology"},
+    {"id": "tech-hybrid-retrieval", "label": "Hybrid Retrieval", "type": "Technology"},
+    {"id": "tech-vector-search", "label": "Vector Search", "type": "Technology"},
+    {"id": "tech-llm-evaluation", "label": "LLM Evaluation", "type": "Technology"},
+    {"id": "tech-prompt-engineering", "label": "Prompt Engineering", "type": "Technology"},
     {"id": "tech-pinecone-db", "label": "Pinecone Vector Database", "type": "Technology"},
-    {"id": "tech-fastapi", "label": "FastAPI", "type": "Technology"},
-    {"id": "tech-react", "label": "React", "type": "Technology"},
+    {"id": "tech-faiss", "label": "FAISS", "type": "Technology"},
     {"id": "tech-openai-embeddings", "label": "OpenAI Embeddings", "type": "Technology"},
     {"id": "tech-llamaparse", "label": "LlamaParse", "type": "Technology"},
     {"id": "tech-sentence-transformers", "label": "sentence-transformers", "type": "Technology"},
     {"id": "tech-bm25", "label": "BM25", "type": "Technology"},
+    {"id": "tech-fastapi", "label": "FastAPI", "type": "Technology"},
+    {"id": "tech-react", "label": "React", "type": "Technology"},
+    {"id": "tech-typescript", "label": "TypeScript", "type": "Technology"},
+    {"id": "tech-tailwind", "label": "Tailwind CSS", "type": "Technology"},
     {"id": "tech-docker", "label": "Docker", "type": "Technology"},
-    {"id": "community-wiml", "label": "Women in Machine Learning Mentorship Program", "type": "Community"},
-    {"id": "community-seattle-ai", "label": "Seattle Applied AI Meetup", "type": "Community"}
+    {"id": "tech-railway", "label": "Railway", "type": "Technology"},
+    {"id": "tech-looker", "label": "Looker", "type": "Technology"},
+    {"id": "tech-sigma", "label": "Sigma", "type": "Technology"},
+    {"id": "tech-bigquery", "label": "BigQuery", "type": "Technology"},
+    {"id": "tech-dbt", "label": "DBT", "type": "Technology"},
+    {"id": "tech-tableau", "label": "Tableau", "type": "Technology"},
+    {"id": "tech-power-bi", "label": "Power BI", "type": "Technology"},
+    {"id": "tech-google-analytics", "label": "Google Analytics", "type": "Technology"},
+    {"id": "tech-selenium", "label": "Selenium", "type": "Technology"},
+    {"id": "tech-backtrader", "label": "Backtrader", "type": "Technology"},
+    {"id": "tech-ccxt", "label": "CCXT", "type": "Technology"},
+    {"id": "tech-pandas", "label": "pandas", "type": "Technology"},
+    {"id": "tech-numpy", "label": "NumPy", "type": "Technology"},
+    {"id": "tech-pyarrow", "label": "PyArrow", "type": "Technology"},
+    {"id": "tech-pydantic", "label": "Pydantic", "type": "Technology"},
+    {"id": "tech-pytest", "label": "pytest", "type": "Technology"},
+    {"id": "tech-sqlite", "label": "SQLite", "type": "Technology"},
+    {"id": "tech-playwright", "label": "Playwright", "type": "Technology"},
+    {"id": "tech-asyncio", "label": "asyncio", "type": "Technology"},
+    {"id": "tech-discord", "label": "Discord Webhooks and Discord API", "type": "Technology"},
+    {"id": "tech-pm2", "label": "PM2", "type": "Technology"},
+    {"id": "tech-launchd", "label": "launchd", "type": "Technology"},
+    {"id": "tech-crontab", "label": "crontab", "type": "Technology"},
+    {"id": "tech-arima", "label": "ARIMA", "type": "Technology"},
+    {"id": "tech-arimax", "label": "ARIMAX", "type": "Technology"},
+    {"id": "tech-loocv", "label": "Leave-One-Out Cross Validation", "type": "Technology"},
+    {"id": "tech-multinomial-logistic", "label": "Multinomial Logistic Regression", "type": "Technology"},
+    {"id": "tech-glm", "label": "Generalized Linear Models", "type": "Technology"},
+    {"id": "tech-lasso", "label": "Lasso Regression", "type": "Technology"},
+    {"id": "tech-bootstrap", "label": "Bootstrapping", "type": "Technology"}
   ],
   "edges": [
+    {
+      "source": "yutian-yang",
+      "target": "github-profile",
+      "relation": "maintains",
+      "description": "Public GitHub profile at https://github.com/charlieyang1557 with portfolio, RAG systems, quantitative finance research, browser automation, and university coursework repositories."
+    },
+    {
+      "source": "yutian-yang",
+      "target": "uiuc-mcs",
+      "relation": "pursues_degree",
+      "start": "August 2026",
+      "end": "Expected December 2027",
+      "location": "Urbana-Champaign, IL",
+      "description": "Master of Computer Science at UIUC."
+    },
+    {
+      "source": "yutian-yang",
+      "target": "ucd-ms-statistics",
+      "relation": "earned_degree",
+      "start": "September 2021",
+      "end": "June 2023",
+      "location": "Davis, CA",
+      "description": "Master of Science in Statistics at UC Davis."
+    },
+    {
+      "source": "yutian-yang",
+      "target": "ucd-bs-statistics-economics",
+      "relation": "earned_degree",
+      "start": "September 2017",
+      "end": "June 2021",
+      "location": "Davis, CA",
+      "description": "Bachelor of Science in Statistics and Economics at UC Davis."
+    },
     {
       "source": "yutian-yang",
       "target": "onshape-ptc",
@@ -47,11 +149,13 @@
       "start": "June 2025",
       "end": "August 2025",
       "location": "Boston, MA",
-      "description": "Data Science Intern focused on R&D strategy with API telemetry analytics and AI feedback research.",
+      "description": "Data Science Intern at Onshape by PTC, a cloud-based CAD platform.",
       "highlights": [
-        "Implemented Prophet with Isolation Forest for anomaly detection",
-        "Leveraged AWS Bedrock Titan Embeddings and Claude 3.5 Sonnet to cluster NPS feedback",
-        "Built Looker dashboards and Slack automation for anomaly monitoring"
+        "Built and evaluated Prophet plus Isolation Forest, Merlion, and LSTM autoencoder anomaly detection models for API telemetry monitoring",
+        "Selected and deployed a Prophet-based pipeline for performance, interpretability, and ease of deployment",
+        "Used AWS Bedrock Titan Embeddings and Claude 3.5 Sonnet to cluster and analyze NPS feedback",
+        "Identified about 8% AI Advisor query coverage gaps and 5% of top topics lacking sufficient resolution content",
+        "Built Looker dashboards and Slack alerts surfacing the top 20 daily API anomalies, reducing engineer triage to 5 flagged cases with metrics pre-computed"
       ]
     },
     {
@@ -61,11 +165,12 @@
       "start": "June 2024",
       "end": "August 2024",
       "location": "New York, NY",
-      "description": "Data Science Intern supporting go-to-market analytics and product intelligence.",
+      "description": "Data Science Intern supporting go-to-market analytics and product intelligence at an AI vector database company.",
       "highlights": [
-        "Designed Book of Business and Account 360 dashboards with SQL and Sigma",
-        "Created dim_assistants schema in BigQuery and dbt",
-        "Conducted churn analysis with Random Forest models resulting in 10% churn reduction"
+        "Designed Book of Business and Account 360 dashboards with SQL and Sigma, improving sales operations by 15%",
+        "Implemented Row-Level Security and Notion documentation, reducing onboarding time by 30%",
+        "Developed the dim_assistants schema in BigQuery and DBT and built the Pinecone Assistant dashboard",
+        "Used Python, Random Forests, and time series cross-validation for churn analysis on incomplete upstream unstructured data, identifying 5 churn metrics and reducing churn by 10%"
       ]
     },
     {
@@ -75,11 +180,12 @@
       "start": "June 2022",
       "end": "August 2022",
       "location": "San Mateo, CA",
-      "description": "Data Analyst Intern in Growth & BI with experimentation and dashboard automation initiatives.",
+      "description": "Data Analyst Intern at Allschool, an EdTech platform.",
       "highlights": [
-        "Executed A/B tests and segmentation analyses on traffic and revenue",
-        "Evaluated multi-channel acquisition behaviour using SQL and BI tooling",
-        "Developed Selenium web scraper and Looker Studio dashboard for real-time visibility"
+        "Improved impression targeting through A/B testing and segmentation analysis using Google Analytics",
+        "Evaluated advertising-channel behavior with SQL and BI tools, reducing project budget by 15%",
+        "Designed a Python and Selenium web scraper that accelerated class selection by 50%",
+        "Developed a Google Looker Studio dashboard for active users, daily traffic, and revenue"
       ]
     },
     {
@@ -89,83 +195,256 @@
       "start": "July 2020",
       "end": "September 2020",
       "location": "Davis, CA",
-      "description": "Research Assistant analysing procrastination and present-biased behaviour with Professor Anujit Chakraborty.",
+      "description": "Research Assistant analyzing procrastination and present-biased behavior with Professor Anujit Chakraborty.",
       "highlights": [
-        "Applied bootstrapping to expand the dataset to 20,000 observations",
-        "Used logistic regression and GLMs to study behavioural trends",
-        "Implemented Lasso regularisation to address multicollinearity"
-      ]
-    },
-    {
-      "source": "yutian-yang",
-      "target": "ucd-ms",
-      "relation": "earned_degree",
-      "start": "September 2021",
-      "end": "June 2023",
-      "location": "Davis, CA",
-      "description": "Master of Science in Statistics with advanced coursework in statistical computing, machine learning, and optimisation."
-    },
-    {
-      "source": "yutian-yang",
-      "target": "ucd-bs",
-      "relation": "earned_degree",
-      "start": "September 2017",
-      "end": "June 2021",
-      "location": "Davis, CA",
-      "description": "Bachelor of Science in Statistics and Economics."
-    },
-    {
-      "source": "yutian-yang",
-      "target": "project-mushroom",
-      "relation": "built_project",
-      "description": "Collaborated on mushroom classification models using Random Forest, Kernel SVM, CNNs, and ResNet50 transfer learning.",
-      "highlights": [
-        "Implemented hyperparameter tuning with grid search",
-        "Evaluated deep learning architectures for image classification"
+        "Applied GLM and Logistic Regression to behavioral trends",
+        "Used bootstrapping to expand the study sample to approximately 20,000 observations",
+        "Used Lasso Regression to address multicollinearity and improve prediction accuracy",
+        "Translated procrastination and present-bias findings into product design insights"
       ]
     },
     {"source": "yutian-yang", "target": "skill-programming", "relation": "skilled_in", "description": "Experienced in SQL, Python, and R."},
-    {"source": "yutian-yang", "target": "skill-ml", "relation": "skilled_in", "description": "Hands-on with Scikit-learn, TensorFlow, Random Forests, SVM, CNN, and time series techniques."},
-    {"source": "yutian-yang", "target": "skill-data-engineering", "relation": "skilled_in", "description": "Builds data pipelines with BigQuery, dbt, AWS, GCP, and ETL design."},
-    {"source": "yutian-yang", "target": "skill-bi", "relation": "skilled_in", "description": "Develops BI assets with Tableau, Power BI, Looker, Sigma, and Google Analytics."},
-    {"source": "yutian-yang", "target": "community-wiml", "relation": "volunteers_with", "description": "Mentor with the WiML Mentorship Program."},
-    {"source": "yutian-yang", "target": "community-seattle-ai", "relation": "organises", "description": "Organizer for the 1,200+ member Seattle Applied AI Meetup."},
-    {"source": "onshape-ptc", "target": "tech-aws-bedrock", "relation": "used_technology", "description": "Leveraged AWS Bedrock services for feedback clustering."},
-    {"source": "onshape-ptc", "target": "tech-claude", "relation": "used_technology", "description": "Applied Claude 3.5 Sonnet for qualitative analysis."},
-    {"source": "onshape-ptc", "target": "tech-titan-embeddings", "relation": "used_technology", "description": "Generated embeddings for clustering feedback."},
-    {"source": "onshape-ptc", "target": "tech-prophet", "relation": "used_technology", "description": "Deployed Prophet-based anomaly detection pipeline."},
-    {"source": "onshape-ptc", "target": "tech-isolation-forest", "relation": "used_technology", "description": "Combined Isolation Forest with Prophet for anomaly scoring."},
-    {"source": "onshape-ptc", "target": "tech-merlion", "relation": "evaluated_technology", "description": "Benchmarked Merlion for anomaly detection."},
-    {"source": "onshape-ptc", "target": "tech-lstm-ae", "relation": "evaluated_technology", "description": "Tested LSTM autoencoder for telemetry anomalies."},
-    {"source": "onshape-ptc", "target": "tech-looker", "relation": "used_technology", "description": "Built Looker dashboards for anomaly visibility."},
-    {"source": "pinecone", "target": "tech-sql", "relation": "used_technology", "description": "Developed dashboards and analyses with SQL."},
-    {"source": "pinecone", "target": "tech-sigma", "relation": "used_technology", "description": "Built executive dashboards in Sigma."},
-    {"source": "pinecone", "target": "tech-bigquery", "relation": "used_technology", "description": "Modeled data in BigQuery."},
-    {"source": "pinecone", "target": "tech-dbt", "relation": "used_technology", "description": "Implemented dbt transformations for analytics."},
-    {"source": "pinecone", "target": "tech-python", "relation": "used_technology", "description": "Ran churn modelling workflows in Python."},
-    {"source": "pinecone", "target": "tech-random-forest", "relation": "used_technology", "description": "Built Random Forest models for churn detection."},
+    {"source": "yutian-yang", "target": "skill-ml", "relation": "skilled_in", "description": "Hands-on with Scikit-learn, PyTorch, Random Forests, SVM, CNN, Prophet, and Statsmodels."},
+    {"source": "yutian-yang", "target": "skill-ai-llm", "relation": "skilled_in", "description": "Builds RAG systems, hybrid retrieval pipelines, vector search, LLM evaluation workflows, prompt engineering workflows, and systems using Anthropic Claude and AWS Bedrock."},
+    {"source": "yutian-yang", "target": "skill-data-engineering", "relation": "skilled_in", "description": "Builds data systems with Pinecone, FAISS, BigQuery, DBT, AWS, GCP, ETL, and schema design."},
+    {"source": "yutian-yang", "target": "skill-bi", "relation": "skilled_in", "description": "Develops BI and analytics assets with Tableau, Power BI, Looker, Sigma, and Google Analytics."},
+    {"source": "yutian-yang", "target": "hobby-traveling", "relation": "interested_in", "description": "Enjoys traveling."},
+    {"source": "yutian-yang", "target": "hobby-dining", "relation": "interested_in", "description": "Enjoys dining, especially omakase and bars."},
+    {"source": "hobby-dining", "target": "hobby-omakase", "relation": "includes_interest", "description": "Omakase is a particular dining interest."},
+    {"source": "hobby-dining", "target": "hobby-bars", "relation": "includes_interest", "description": "Bars are a particular dining interest."},
+    {"source": "yutian-yang", "target": "hobby-board-games", "relation": "interested_in", "description": "Enjoys board games."},
+    {"source": "yutian-yang", "target": "hobby-poker", "relation": "interested_in", "description": "Enjoys poker."},
+    {
+      "source": "yutian-yang",
+      "target": "hobby-badminton",
+      "relation": "plays_sport",
+      "description": "Badminton is one of Yutian's hobbies.",
+      "highlights": [
+        "UC Davis Badminton Team member",
+        "2022 Davis Open mixed doubles runner-up",
+        "2023 Davis Open mixed doubles champion",
+        "2023 Davis Open men's doubles champion"
+      ]
+    },
+    {"source": "yutian-yang", "target": "uc-davis-badminton-team", "relation": "member_of", "description": "Member of the UC Davis Badminton Team."},
+    {"source": "yutian-yang", "target": "davis-open-2022", "relation": "earned_achievement", "description": "2022 Davis Open mixed doubles runner-up."},
+    {"source": "yutian-yang", "target": "davis-open-2023", "relation": "earned_achievement", "description": "2023 Davis Open mixed doubles champion and men's doubles champion."},
+    {"source": "yutian-yang", "target": "hobby-teamfight-tactics", "relation": "plays_game", "description": "Plays Teamfight Tactics (TFT)."},
+    {"source": "yutian-yang", "target": "tft-master-rank", "relation": "earned_achievement", "description": "Reached Master rank in Teamfight Tactics for multiple seasons."},
+    {
+      "source": "yutian-yang",
+      "target": "project-btc-alpha-pipeline",
+      "relation": "built_project",
+      "description": "Built BTC Alpha Pipeline, an active pre-MVP quantitative research pipeline for discovering, testing, and validating BTC trading strategies while avoiding look-ahead bias, data leakage, and backtest overfitting.",
+      "highlights": [
+        "Validated BTC/USDT hourly OHLCV ingestion from Binance Vision and CCXT",
+        "Stores Parquet market data with schema and quality checks",
+        "Implements Backtrader single-run and walk-forward backtesting, experiment registry tracking, baselines, and trade-audit workflows",
+        "Includes factor library, strategy DSL, hypothesis hashing, and AI-assisted hypothesis mining scaffolding",
+        "Current focus is regime-aware holdout evaluation, multiple-testing controls, Sharpe deflation screens, and evidence gates"
+      ]
+    },
+    {
+      "source": "yutian-yang",
+      "target": "project-polymarket-arb",
+      "relation": "built_project",
+      "description": "Built and deployed an automated trading system for Polymarket US and Kalshi prediction markets, then systematically tested four strategies from March 10 to April 7, 2026.",
+      "highlights": [
+        "Tested passive market making, Pinnacle de-vig odds calibration, cross-market correlation, and WebSocket event trading",
+        "Found Polymarket US sports markets priced within about +/-0.8% of Pinnacle, leaving no systematic mispricing in the tested setup",
+        "Identified adverse selection and a roughly 26% round-trip fill rate as the main issue in passive market making",
+        "Built live market-making, paper trading, market scanning, calibration, cross-market logging, and shared market-making engine modules",
+        "Implemented 4-layer risk controls and maintained 639 unit tests across 36+ test files"
+      ]
+    },
+    {
+      "source": "yutian-yang",
+      "target": "project-tock-reservation-bot",
+      "relation": "built_project",
+      "description": "Built an automated Tock reservation sniper that monitors restaurant slots, enters high-speed polling around release windows, books the first available slot, and sends Discord notifications.",
+      "highlights": [
+        "Implemented roughly 3-second sniper polling, release auto-detection, session pre-warming, and cookie persistence",
+        "Added adaptive concurrency, concurrent booking races, dry-run mode, selector verification, and slot release tracking",
+        "Designed Discord notifications for confirmations, detections, sniper activations, booking errors, and dry-run outcomes"
+      ]
+    },
+    {
+      "source": "yutian-yang",
+      "target": "project-openclaw-server",
+      "relation": "built_project",
+      "description": "Built a self-hosted Mac Mini production server running automated systems with monitoring and self-recovery.",
+      "highlights": [
+        "Configured pmset, launchd caffeinate, and per-process caffeinate wrappers for sleep prevention",
+        "Uses PM2 startup, PM2 save, crontab with NVM environment sourcing, auto-restart on power failure, Wake on LAN, and SSH",
+        "Runs a Discord monitoring bot through the OpenClaw gateway and manages the Tock bot, Polymarket system, and OpenClaw Discord gateway",
+        "Verified service recovery through reboot testing"
+      ]
+    },
     {
       "source": "yutian-yang",
       "target": "project-boardgame-oracle",
       "relation": "built_project",
-      "description": "Built a RAG system that answers board game rules questions with citations from official rulebooks. Supports Splendor, Catan, Speakeasy, and Food Chain Magnate.",
+      "description": "Built BoardGameOracle, a RAG-based Q&A system that answers board game rules questions with citations, multi-hop reasoning, and honest uncertainty handling.",
       "highlights": [
-        "Hybrid retrieval: Pinecone dense vectors + BM25 with Reciprocal Rank Fusion and cross-encoder reranking",
-        "3-tier answer system with chain-of-retrieval multi-hop reasoning",
-        "Zero hallucinations on 186-entry golden dataset across all 4 games",
-        "Config-driven chunking: adding a new game is a config change, not a code change",
-        "Splendor 100% Tier 1 accuracy, Catan 93%, FCM multi-hop 90%"
+        "Supports Splendor, Catan, Speakeasy, and Food Chain Magnate",
+        "Uses query rewriting, Pinecone dense retrieval, BM25 sparse retrieval, Reciprocal Rank Fusion, cross-encoder reranking, tier routing, and citation verification",
+        "Evaluation results: Splendor 91% accuracy, Catan 91%, Speakeasy 82%, Food Chain Magnate 79%, and Food Chain Magnate Tier 2 multi-hop 90%",
+        "Deployed as a single-service Docker container on Railway with FastAPI serving the React build"
       ]
     },
+    {
+      "source": "yutian-yang",
+      "target": "project-resume-chatbot",
+      "relation": "built_project",
+      "description": "Built the Resume RAG Chatbot, a portfolio-ready chatbot that answers questions about Yutian's resume with hybrid retrieval and Claude.",
+      "highlights": [
+        "Uses BM25 and FAISS hybrid retrieval, Reciprocal Rank Fusion, query rewriting, Claude streaming responses, and source attribution",
+        "Alpha sweep via LLM-as-judge found pure semantic retrieval achieved 5.0/5.0 relevance",
+        "Frontend includes markdown rendering, collapsible source cards, dark/light theme, and typing indicators",
+        "Deployed as a full-stack Dockerized app on Railway"
+      ]
+    },
+    {
+      "source": "yutian-yang",
+      "target": "project-mushroom",
+      "relation": "built_university_project",
+      "description": "Built the STA 221 Mushroom Classification project to classify mushroom images as edible or poisonous using a Kaggle dataset of over 3,000 images.",
+      "highlights": [
+        "Compared Random Forest, Kernel SVM, CNN, and ResNet50 transfer learning",
+        "Random Forest reached 0.648 test accuracy after hyperparameter optimization",
+        "Kernel SVM reached 0.656 test accuracy",
+        "Concluded Random Forest was the most promising overall by accuracy, precision, recall, F1, and discriminatory power"
+      ]
+    },
+    {
+      "source": "yutian-yang",
+      "target": "project-wheat",
+      "relation": "built_university_project",
+      "description": "Built the STA 160 Wheat Classification project analyzing UCI seed data for Kama, Rosa, and Canadian wheat varieties.",
+      "highlights": [
+        "Used visualization, correlation analysis, Leave-One-Out Cross Validation, grid search with Random Forest, and multiclass classification",
+        "Random Forest grid search reported 0.952381 training accuracy under the selected configuration",
+        "Compared multinomial logistic classification against One-vs-Rest methods using area and perimeter predictors"
+      ]
+    },
+    {
+      "source": "yutian-yang",
+      "target": "project-info-cascades",
+      "relation": "built_university_project",
+      "description": "Built the ECN 190 Information Cascades project investigating whether participants follow public predictions over private signals in a sequential urn-prediction experiment.",
+      "highlights": [
+        "Reported 25 experimental rounds with 11 cascades forming, or 44% of rounds",
+        "Connected information cascades to herding behavior, investment patterns, marketing, and voting implications",
+        "Proposed a loss-aversion extension using larger penalties for incorrect guesses"
+      ]
+    },
+    {
+      "source": "yutian-yang",
+      "target": "project-covid-dashboard",
+      "relation": "built_university_project",
+      "description": "Built the STA 141B Covid Dashboard, a Covid-19 status tracker for country-level confirmed cases, deaths, and recoveries over selected time periods.",
+      "highlights": [
+        "Included country comparison, global summary, status plots, and detailed country tables",
+        "README notes the original covid19api.com source is no longer working"
+      ]
+    },
+    {
+      "source": "yutian-yang",
+      "target": "project-vaccine-policy",
+      "relation": "built_university_project",
+      "description": "Built the STA 237A Covid and Vaccination Policy project assessing the effect of vaccination policy on Covid spread and whether policy effectiveness varied across countries.",
+      "highlights": [
+        "Modeled vaccination policy as increasing-stringency dummies and Covid growth rate as new cases per million",
+        "Controlled for testing rate, compared ARIMA and ARIMAX models, and used gain in variance explained as a proxy for policy effectiveness",
+        "Planned ANOVA comparisons across countries and internal/external validation using held-out realized data"
+      ]
+    },
+
+    {"source": "onshape-ptc", "target": "tech-prophet", "relation": "used_technology", "description": "Used Prophet for the selected anomaly detection pipeline."},
+    {"source": "onshape-ptc", "target": "tech-isolation-forest", "relation": "used_technology", "description": "Evaluated Prophet plus Isolation Forest for API telemetry monitoring."},
+    {"source": "onshape-ptc", "target": "tech-merlion", "relation": "evaluated_technology", "description": "Evaluated Merlion for anomaly detection."},
+    {"source": "onshape-ptc", "target": "tech-lstm-ae", "relation": "evaluated_technology", "description": "Evaluated LSTM autoencoder models for API telemetry anomalies."},
+    {"source": "onshape-ptc", "target": "tech-aws-bedrock", "relation": "used_technology", "description": "Used AWS Bedrock for AI feedback analysis workflows."},
+    {"source": "onshape-ptc", "target": "tech-titan-embeddings", "relation": "used_technology", "description": "Used Titan Embeddings for NPS feedback clustering."},
+    {"source": "onshape-ptc", "target": "tech-claude", "relation": "used_technology", "description": "Used Claude 3.5 Sonnet for clustering, naming, and sentiment analysis."},
+    {"source": "onshape-ptc", "target": "tech-looker", "relation": "used_technology", "description": "Built Looker dashboards for anomaly and AI insight visibility."},
+
+    {"source": "pinecone", "target": "tech-sql", "relation": "used_technology", "description": "Used SQL for dashboards and analysis."},
+    {"source": "pinecone", "target": "tech-sigma", "relation": "used_technology", "description": "Built executive dashboards in Sigma."},
+    {"source": "pinecone", "target": "tech-bigquery", "relation": "used_technology", "description": "Modeled product analytics data in BigQuery."},
+    {"source": "pinecone", "target": "tech-dbt", "relation": "used_technology", "description": "Implemented DBT transformations for analytics pipelines."},
+    {"source": "pinecone", "target": "tech-python", "relation": "used_technology", "description": "Used Python for churn modeling workflows."},
+    {"source": "pinecone", "target": "tech-random-forest", "relation": "used_technology", "description": "Used Random Forest models for churn analysis."},
+
+    {"source": "allschool", "target": "tech-google-analytics", "relation": "used_technology", "description": "Used Google Analytics for traffic and revenue segmentation."},
+    {"source": "allschool", "target": "tech-sql", "relation": "used_technology", "description": "Used SQL for advertising-channel behavior analysis."},
+    {"source": "allschool", "target": "tech-selenium", "relation": "used_technology", "description": "Built a Python and Selenium scraper for class selection."},
+    {"source": "allschool", "target": "tech-looker", "relation": "used_technology", "description": "Used Google Looker Studio for active-user, traffic, and revenue dashboards."},
+
+    {"source": "ucd-economics", "target": "tech-glm", "relation": "used_technology", "description": "Used generalized linear models for behavioral trend analysis."},
+    {"source": "ucd-economics", "target": "tech-bootstrap", "relation": "used_technology", "description": "Used bootstrapping to expand the study sample."},
+    {"source": "ucd-economics", "target": "tech-lasso", "relation": "used_technology", "description": "Used Lasso Regression to address multicollinearity."},
+
+    {"source": "project-btc-alpha-pipeline", "target": "tech-python", "relation": "used_technology", "description": "Python 3.11+ is the main implementation language."},
+    {"source": "project-btc-alpha-pipeline", "target": "tech-pandas", "relation": "used_technology", "description": "Uses pandas for market data and research workflows."},
+    {"source": "project-btc-alpha-pipeline", "target": "tech-numpy", "relation": "used_technology", "description": "Uses NumPy for quantitative computation."},
+    {"source": "project-btc-alpha-pipeline", "target": "tech-pyarrow", "relation": "used_technology", "description": "Uses PyArrow and Parquet for market data storage."},
+    {"source": "project-btc-alpha-pipeline", "target": "tech-backtrader", "relation": "used_technology", "description": "Uses Backtrader for single-run and walk-forward backtesting."},
+    {"source": "project-btc-alpha-pipeline", "target": "tech-ccxt", "relation": "used_technology", "description": "Uses CCXT for exchange data access."},
+    {"source": "project-btc-alpha-pipeline", "target": "tech-sqlite", "relation": "used_technology", "description": "Uses SQLite for experiment tracking."},
+    {"source": "project-btc-alpha-pipeline", "target": "tech-pydantic", "relation": "used_technology", "description": "Uses Pydantic for schemas and validation."},
+    {"source": "project-btc-alpha-pipeline", "target": "tech-pytest", "relation": "used_technology", "description": "Uses pytest for test coverage."},
+    {"source": "project-btc-alpha-pipeline", "target": "tech-claude", "relation": "used_technology", "description": "Uses Anthropic SDK for AI-assisted hypothesis workflow."},
+
+    {"source": "project-polymarket-arb", "target": "tech-python", "relation": "used_technology", "description": "Python implementation for trading, scanning, and research tooling."},
+    {"source": "project-polymarket-arb", "target": "tech-sqlite", "relation": "used_technology", "description": "Uses SQLite persistence for fills, orders, and snapshots."},
+    {"source": "project-polymarket-arb", "target": "tech-pytest", "relation": "used_technology", "description": "Maintains a large pytest suite for trading logic and risk controls."},
+
+    {"source": "project-tock-reservation-bot", "target": "tech-python", "relation": "used_technology", "description": "Python implementation for monitoring and booking automation."},
+    {"source": "project-tock-reservation-bot", "target": "tech-playwright", "relation": "used_technology", "description": "Uses Playwright for browser automation."},
+    {"source": "project-tock-reservation-bot", "target": "tech-asyncio", "relation": "used_technology", "description": "Uses asyncio for parallel date polling and booking races."},
+    {"source": "project-tock-reservation-bot", "target": "tech-discord", "relation": "used_technology", "description": "Uses Discord webhooks for operational notifications."},
+
+    {"source": "project-openclaw-server", "target": "tech-pm2", "relation": "used_technology", "description": "Uses PM2 for process management and auto-recovery."},
+    {"source": "project-openclaw-server", "target": "tech-launchd", "relation": "used_technology", "description": "Uses launchd caffeinate service for sleep prevention."},
+    {"source": "project-openclaw-server", "target": "tech-crontab", "relation": "used_technology", "description": "Uses crontab scheduling with NVM environment sourcing."},
+    {"source": "project-openclaw-server", "target": "tech-discord", "relation": "used_technology", "description": "Runs Discord monitoring and alerting workflows."},
+
+    {"source": "project-boardgame-oracle", "target": "tech-rag", "relation": "used_technology", "description": "RAG architecture for board game rules Q&A."},
     {"source": "project-boardgame-oracle", "target": "tech-pinecone-db", "relation": "used_technology", "description": "Pinecone for dense vector retrieval."},
-    {"source": "project-boardgame-oracle", "target": "tech-fastapi", "relation": "used_technology", "description": "FastAPI backend serving the RAG pipeline."},
-    {"source": "project-boardgame-oracle", "target": "tech-react", "relation": "used_technology", "description": "React frontend with expandable source cards and tier badges."},
-    {"source": "project-boardgame-oracle", "target": "tech-claude", "relation": "used_technology", "description": "Claude Sonnet/Haiku for answer generation and entailment verification."},
+    {"source": "project-boardgame-oracle", "target": "tech-bm25", "relation": "used_technology", "description": "BM25 sparse retrieval fused with dense vectors."},
+    {"source": "project-boardgame-oracle", "target": "tech-sentence-transformers", "relation": "used_technology", "description": "Cross-encoder reranking with sentence-transformers."},
     {"source": "project-boardgame-oracle", "target": "tech-openai-embeddings", "relation": "used_technology", "description": "OpenAI embeddings for document vectorization."},
     {"source": "project-boardgame-oracle", "target": "tech-llamaparse", "relation": "used_technology", "description": "LlamaParse for rulebook PDF parsing."},
-    {"source": "project-boardgame-oracle", "target": "tech-sentence-transformers", "relation": "used_technology", "description": "Cross-encoder reranking with ms-marco-MiniLM."},
-    {"source": "project-boardgame-oracle", "target": "tech-bm25", "relation": "used_technology", "description": "BM25 sparse retrieval fused with dense vectors."},
-    {"source": "project-boardgame-oracle", "target": "tech-docker", "relation": "used_technology", "description": "Docker containerized deployment on Railway."},
-    {"source": "project-boardgame-oracle", "target": "tech-python", "relation": "used_technology", "description": "Python backend implementation."}
+    {"source": "project-boardgame-oracle", "target": "tech-claude", "relation": "used_technology", "description": "Claude Haiku for query rewriting and Claude Sonnet for generation and verification."},
+    {"source": "project-boardgame-oracle", "target": "tech-fastapi", "relation": "used_technology", "description": "FastAPI backend."},
+    {"source": "project-boardgame-oracle", "target": "tech-react", "relation": "used_technology", "description": "React frontend."},
+    {"source": "project-boardgame-oracle", "target": "tech-typescript", "relation": "used_technology", "description": "TypeScript frontend implementation."},
+    {"source": "project-boardgame-oracle", "target": "tech-tailwind", "relation": "used_technology", "description": "Tailwind CSS frontend styling."},
+    {"source": "project-boardgame-oracle", "target": "tech-docker", "relation": "used_technology", "description": "Dockerized deployment."},
+    {"source": "project-boardgame-oracle", "target": "tech-railway", "relation": "deployed_on", "description": "Deployed on Railway."},
+
+    {"source": "project-resume-chatbot", "target": "tech-rag", "relation": "used_technology", "description": "RAG chatbot architecture for resume Q&A."},
+    {"source": "project-resume-chatbot", "target": "tech-bm25", "relation": "used_technology", "description": "BM25 exact keyword retrieval."},
+    {"source": "project-resume-chatbot", "target": "tech-faiss", "relation": "used_technology", "description": "FAISS dense semantic retrieval."},
+    {"source": "project-resume-chatbot", "target": "tech-hybrid-retrieval", "relation": "used_technology", "description": "Hybrid retrieval with Reciprocal Rank Fusion."},
+    {"source": "project-resume-chatbot", "target": "tech-claude", "relation": "used_technology", "description": "Claude LLM streaming and query rewriting."},
+    {"source": "project-resume-chatbot", "target": "tech-fastapi", "relation": "used_technology", "description": "FastAPI backend."},
+    {"source": "project-resume-chatbot", "target": "tech-react", "relation": "used_technology", "description": "React frontend."},
+    {"source": "project-resume-chatbot", "target": "tech-docker", "relation": "used_technology", "description": "Dockerized startup and deployment."},
+    {"source": "project-resume-chatbot", "target": "tech-railway", "relation": "deployed_on", "description": "Deployed on Railway."},
+
+    {"source": "project-mushroom", "target": "tech-random-forest", "relation": "used_technology", "description": "Random Forest was the most promising model overall."},
+    {"source": "project-mushroom", "target": "tech-svm", "relation": "used_technology", "description": "Kernel SVM reached 0.656 test accuracy."},
+    {"source": "project-mushroom", "target": "tech-cnn", "relation": "used_technology", "description": "CNN models were evaluated under limited-image constraints."},
+    {"source": "project-mushroom", "target": "tech-resnet50", "relation": "used_technology", "description": "ResNet50 transfer learning was evaluated but needed further improvement."},
+
+    {"source": "project-wheat", "target": "tech-random-forest", "relation": "used_technology", "description": "Random Forest grid search reported 0.952381 training accuracy."},
+    {"source": "project-wheat", "target": "tech-loocv", "relation": "used_technology", "description": "Used Leave-One-Out Cross Validation for model selection."},
+    {"source": "project-wheat", "target": "tech-multinomial-logistic", "relation": "used_technology", "description": "Compared multinomial logistic classification against One-vs-Rest approaches."},
+
+    {"source": "project-covid-dashboard", "target": "tech-r", "relation": "used_technology", "description": "R-based Covid-19 dashboard project."},
+    {"source": "project-vaccine-policy", "target": "tech-arima", "relation": "used_technology", "description": "Used ARIMA as a null time series model."},
+    {"source": "project-vaccine-policy", "target": "tech-arimax", "relation": "used_technology", "description": "Used ARIMAX/time-series regression with vaccination policy covariates."}
   ]
 }
