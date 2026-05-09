@@ -1,9 +1,12 @@
 import json
 from pathlib import Path
+from types import SimpleNamespace
 
 from fastapi.testclient import TestClient
 
-from resume_chatbot.webapp import create_app
+from resume_chatbot.data_loader import Document
+from resume_chatbot.retriever import RetrievedDocument
+from resume_chatbot.webapp import _sources_from_result, create_app
 
 
 def _make_client() -> TestClient:
@@ -36,6 +39,24 @@ def test_chat_endpoint_returns_answer_and_sources():
     payload = response.json()
     assert payload["answer"]
     assert isinstance(payload["sources"], list)
+
+
+def test_source_scores_are_normalized_for_match_display():
+    documents = [
+        RetrievedDocument(
+            document=Document("top match", {"source": "resume.md", "title": "Top"}),
+            score=0.0164,
+        ),
+        RetrievedDocument(
+            document=Document("next match", {"source": "resume.md", "title": "Next"}),
+            score=0.0154,
+        ),
+    ]
+
+    sources = _sources_from_result(SimpleNamespace(documents=documents))
+
+    assert sources[0]["score"] == 1.0
+    assert sources[1]["score"] == 0.939
 
 
 def test_chat_empty_message_returns_400():

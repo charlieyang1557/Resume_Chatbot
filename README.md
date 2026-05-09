@@ -101,12 +101,22 @@ tests/                  # pytest suite
 |----------|---------|-------------|
 | `ANTHROPIC_API_KEY` | — | Required for Claude LLM and query rewriting |
 | `LLM_BACKEND` | `simple` | `claude`, `simple`, `openai`, or `ollama` |
+| `USE_HYBRID_RETRIEVER` | `true` | Set to `false` to use the lightweight TF-IDF retriever |
 | `RETRIEVER_ALPHA` | `0.5` | 0.0 = pure BM25, 1.0 = pure dense |
 | `CLAUDE_MODEL` | `claude-sonnet-4-20250514` | Override Claude model |
 
 ## Tests
 
+Run the fast default suite during development:
+
 ```bash
 pip install -e ".[dev]"
 python -m pytest tests/ -q
+```
+
+Before committing/deploying webapp changes, also run the production-path hybrid
+retriever smoke test:
+
+```bash
+USE_HYBRID_RETRIEVER=true python -m pytest tests/test_webapp.py -q
 ```

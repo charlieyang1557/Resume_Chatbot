@@ -30,7 +30,7 @@ export function SourceCard({ sources }: SourceCardProps) {
                   {s.title ?? s.source}
                 </span>
                 <span className="source-score">
-                  {(s.score * 100).toFixed(1)}%
+                  {(s.score * 100).toFixed(1)}% match
                 </span>
               </div>
               <p className="source-content">{s.content}</p>

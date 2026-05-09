@@ -27,6 +27,8 @@ STARTER_QUESTIONS = [
     "What was Charlie's impact at Pinecone?",
 ]
 
+FALSE_ENV_VALUES = {"0", "false", "no", "off"}
+
 
 class ChatRequest(BaseModel):
     message: str = Field(..., description="User message to send to the chatbot.")
@@ -50,6 +52,11 @@ class ConfigResponse(BaseModel):
     starter_questions: List[str]
 
 
+def _use_hybrid_retriever() -> bool:
+    value = os.getenv("USE_HYBRID_RETRIEVER", "true").strip().lower()
+    return value not in FALSE_ENV_VALUES
+
+
 def _build_chatbot(resume_directory: Path, llm_backend: str) -> ResumeChatbot:
     documents = load_resume_corpus(resume_directory)
     if not documents:
@@ -60,16 +67,19 @@ def _build_chatbot(resume_directory: Path, llm_backend: str) -> ResumeChatbot:
     retriever: Any
     llm = create_llm(llm_backend)
 
-    # Try to build hybrid retriever, fall back to TF-IDF
-    try:
-        from .hybrid_retriever import BM25Retriever, DenseRetriever, HybridRetriever
-
-        alpha = float(os.getenv("RETRIEVER_ALPHA", "0.5"))
-        sparse = BM25Retriever(documents)
-        dense = DenseRetriever(documents)
-        retriever = HybridRetriever(sparse, dense, alpha=alpha)
-    except ImportError:
+    if not _use_hybrid_retriever():
         retriever = ResumeRetriever(documents)
+    else:
+        # Try to build hybrid retriever, fall back to TF-IDF.
+        try:
+            from .hybrid_retriever import BM25Retriever, DenseRetriever, HybridRetriever
+
+            alpha = float(os.getenv("RETRIEVER_ALPHA", "0.5"))
+            sparse = BM25Retriever(documents)
+            dense = DenseRetriever(documents)
+            retriever = HybridRetriever(sparse, dense, alpha=alpha)
+        except ImportError:
+            retriever = ResumeRetriever(documents)
 
     # Try to build query rewriter (requires Claude API key)
     query_rewriter = None
@@ -86,17 +96,24 @@ def _build_chatbot(resume_directory: Path, llm_backend: str) -> ResumeChatbot:
     )
 
 
-def _sources_from_result(result: Any) -> List[Dict[str, Any]]:
+def _sources_from_documents(documents: List[Any]) -> List[Dict[str, Any]]:
+    max_score = max((max(item.score, 0.0) for item in documents), default=0.0)
     sources: list[dict[str, Any]] = []
-    for item in result.documents:
+    for item in documents:
         metadata = item.document.metadata
         sources.append({
             "source": metadata.get("source", "resume"),
             "title": metadata.get("title"),
-            "score": round(item.score, 4),
+            # Raw RRF scores are internal ranking values, not user-facing
+            # percentages. Scale each source against the top retrieved source.
+            "score": round(max(item.score, 0.0) / max_score, 4) if max_score else 0.0,
             "content": item.document.content[:300],
         })
     return sources
+
+
+def _sources_from_result(result: Any) -> List[Dict[str, Any]]:
+    return _sources_from_documents(list(result.documents))
 
 
 def create_app(
@@ -181,15 +198,7 @@ def create_app(
                     payload = json.dumps({"type": "token", "content": token})
                     yield f"data: {payload}\n\n"
                 if documents is not None:
-                    sources = []
-                    for item in documents:
-                        metadata = item.document.metadata
-                        sources.append({
-                            "source": metadata.get("source", "resume"),
-                            "title": metadata.get("title"),
-                            "score": round(item.score, 4),
-                            "content": item.document.content[:300],
-                        })
+                    sources = _sources_from_documents(documents)
                     payload = json.dumps({"type": "sources", "sources": sources})
                     yield f"data: {payload}\n\n"
             yield f"data: {json.dumps({'type': 'done'})}\n\n"
